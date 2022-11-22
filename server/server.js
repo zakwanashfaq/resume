@@ -1,10 +1,11 @@
 import Express from "express";
+import data from "./data.json" assert { type: "json" };
 
 const PORT = 5600;
 const app = Express();
 
 app.get("/api", (req, res) => {
-    return res.json({message: "Api Init"})
+    return res.json(data)
 })
 
 
