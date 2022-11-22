@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH = /repositories/resume
-    - /bin/cp -R $DEPLOYPATH
