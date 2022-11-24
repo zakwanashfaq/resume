@@ -9,8 +9,8 @@ export const Jumbotron = (props) => {
                     <h1 className="display-4">Hi!</h1>
                     <p className="lead">I am <a className="customJumbotron-name-highlight">Zakwan</a> Ashfaq Zian</p>
                     <div className="row pl-3">Memorial University of Newfoundland</div>
-                    <div className="row pl-3">Bacherlor in Computer Science</div>
-                    <div className="row pl-3">Software Engineer</div>
+                    <div className="row pl-3">Honours in Computer Science</div>
+                    <div className="row pl-3">Web and Game Developer</div>
                 </div>
             </div>
         </div>
