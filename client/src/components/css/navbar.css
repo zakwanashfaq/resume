@@ -1,0 +1,9 @@
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+}
+.belowNavbarStyleLine {
+  background: linear-gradient(170deg, #e3db95 0%, #c7e4c9 100%);
+  height: 4vh;
+}
+/*# sourceMappingURL=navbar.css.map */

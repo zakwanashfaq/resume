@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { Jumbotron } from './components/jumbotron';
+import { Navbar } from './components/navbar';
 
 function App() {
   // const [data, setData] = useState("Loading...");
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <Jumbotron />
+      <Navbar />
     </>
   );
 }
