@@ -5,6 +5,7 @@
   height: 93vh;
   background: #eeaeca;
   background: linear-gradient(170deg, #eeaeca 0%, #94bbe9 60%);
+  border-radius: 0;
 }
 .customJumbotron .customJumbotron-jumbotron .customJumbotron-container {
   height: 100%;
