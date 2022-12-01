@@ -6,7 +6,7 @@ export const Jumbotron = (props) => {
         <div className="p-0 customJumbotron">
             <div className="jumbotron mb-0 customJumbotron-jumbotron">
                 <div className="container customJumbotron-container">
-                    <h1 className="display-4">Hi!</h1>
+                    <h1 className="display-4">Hello!</h1>
                     <p className="lead">I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq Zian</p>
                     <div className="row">Memorial University of Newfoundland</div>
                     <div className="row">Honours in Computer Science</div>
