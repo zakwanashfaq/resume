@@ -1,4 +1,4 @@
-import "./css/jumbotron.css";
+import "./css/out/jumbotron.css";
 
 
 export const Jumbotron = (props) => {
@@ -7,7 +7,7 @@ export const Jumbotron = (props) => {
             <div className="jumbotron mb-0 customJumbotron-jumbotron">
                 <div className="container customJumbotron-container">
                     <h1 className="display-4">Hi!</h1>
-                    <p className="lead">I am <a className="customJumbotron-name-highlight">Zakwan</a> Ashfaq Zian</p>
+                    <p className="lead">I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq Zian</p>
                     <div className="row">Memorial University of Newfoundland</div>
                     <div className="row">Honours in Computer Science</div>
                     <div className="row">Web and Game Developer</div>

@@ -1,4 +1,4 @@
-import "./css/navbar.css"
+import "./css/out/navbar.css"
 
 export const Navbar = (props) => {
     return (
