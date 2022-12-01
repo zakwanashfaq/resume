@@ -1,7 +1,7 @@
 import Express from "express";
 import data from "./data.json" assert { type: "json" };
 
-const PORT = 5600;
+const PORT = process.env.PORT || 5000;
 const app = Express();
 
 app.get("/api", (req, res) => {
