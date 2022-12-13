@@ -1,5 +1,18 @@
 import "./css/out/jumbotron.css";
 
+const onClickOpenGithub = (e) => {
+    window.open(
+        'https://github.com/zakwanashfaq',
+        '_blank'
+    );
+}
+
+const onClickOpenLinkedIn = (e) => {
+    window.open(
+        'https://www.linkedin.com/in/zakwanashfaq/',
+        '_blank'
+    );
+}
 
 export const Jumbotron = (props) => {
     return (
@@ -17,8 +30,8 @@ export const Jumbotron = (props) => {
                     </div>
                     <div className="row p-2">
                     <button type="button" class="btn btn-outline-dark m-1">Contact Me</button>
-                    <button type="button" class="btn btn-outline-dark m-1">Github</button>
-                    <button type="button" class="btn btn-outline-dark m-1">LinkedIn</button>
+                    <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenGithub}>Github</button>
+                    <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenLinkedIn}>LinkedIn</button>
                     </div>
                 </div>
             </div>
