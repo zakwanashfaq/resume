@@ -1,4 +1,4 @@
-import "./css/out/jumbotron.css";
+// import "./css/out/jumbotron.css";
 
 const onClickOpenGithub = (e) => {
     window.open(
@@ -19,7 +19,7 @@ const onClickOpenContactsPage = (e) => {
 }
 
 const onClickOpenProjectsPage = (e) => {
-    window.open('/projects');
+    window.open('/projects', "_self");
 }
 
 export const Jumbotron = (props) => {
@@ -32,14 +32,14 @@ export const Jumbotron = (props) => {
                     <div className="row">Memorial University of Newfoundland</div>
                     <div className="row">Honours in Computer Science</div>
                     <div className="row">Web and Game Developer</div>
-                    <br/>
+                    <br />
                     <div className="row ">
-                    <button type="button" class="btn btn-dark" onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
+                        <button type="button" class="btn btn-dark" onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
                     </div>
                     <div className="row p-2">
-                    <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenContactsPage}>Contact Me</button>
-                    <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenGithub}>Github</button>
-                    <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenLinkedIn}>LinkedIn</button>
+                        <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenContactsPage}>Contact Me</button>
+                        <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenGithub}>Github</button>
+                        <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenLinkedIn}>LinkedIn</button>
                     </div>
                 </div>
             </div>
