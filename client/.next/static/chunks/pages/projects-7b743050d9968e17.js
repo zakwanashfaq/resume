@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[327],{8291:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/projects",function(){return t(7915)}])},7915:function(n,u,t){"use strict";t.r(u);var r=t(5893);u.default=function(n){return(0,r.jsx)("div",{children:"Proj"})}}},function(n){n.O(0,[774,888,179],function(){return n(n.s=8291)}),_N_E=n.O()}]);

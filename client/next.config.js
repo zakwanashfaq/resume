@@ -5,6 +5,7 @@ module.exports = (phase, { defaultConfig }) => {
     const nextConfig = {
       /* config options here */
       // basePath: '/pages',
+      distDir: 'build',
     }
     return nextConfig
   }

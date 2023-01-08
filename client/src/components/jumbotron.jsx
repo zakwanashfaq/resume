@@ -15,7 +15,7 @@ const onClickOpenLinkedIn = (e) => {
 }
 
 const onClickOpenContactsPage = (e) => {
-    window.open('/contact');
+    window.open('/contact', "_self");
 }
 
 const onClickOpenProjectsPage = (e) => {

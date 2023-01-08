@@ -61,6 +61,20 @@
   color: #323232;
   font-weight: 500;
 }
+.project-page-conatiner {
+  background: #aeeee2;
+  background: linear-gradient(140deg, #aeeee2 0%, #dbd3b5 50%, #b2b2b2 100%);
+  min-height: 100vh;
+}
+.project-page-conatiner h1 {
+  color: #5c5c5c;
+}
+.project-page-conatiner .main-header {
+  padding: 30px 0 15px 0;
+}
+.project-page-conatiner .item-container img {
+  background-color: aqua;
+}
 body {
   margin: 0;
 }
