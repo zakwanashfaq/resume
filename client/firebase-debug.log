@@ -1,45 +1,24 @@
-[debug] [2023-01-07T02:33:41.193Z] ----------------------------------------------------------------------
-[debug] [2023-01-07T02:33:41.195Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zakwan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2023-01-07T02:33:41.195Z] CLI Version:   11.18.0
-[debug] [2023-01-07T02:33:41.195Z] Platform:      win32
-[debug] [2023-01-07T02:33:41.195Z] Node Version:  v16.18.0
-[debug] [2023-01-07T02:33:41.196Z] Time:          Fri Jan 06 2023 23:03:41 GMT-0330 (Newfoundland Standard Time)
-[debug] [2023-01-07T02:33:41.197Z] ----------------------------------------------------------------------
+[debug] [2023-01-08T12:48:06.924Z] ----------------------------------------------------------------------
+[debug] [2023-01-08T12:48:06.927Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zakwan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-01-08T12:48:06.927Z] CLI Version:   11.18.0
+[debug] [2023-01-08T12:48:06.927Z] Platform:      win32
+[debug] [2023-01-08T12:48:06.928Z] Node Version:  v16.18.0
+[debug] [2023-01-08T12:48:06.936Z] Time:          Sun Jan 08 2023 09:18:06 GMT-0330 (Newfoundland Standard Time)
+[debug] [2023-01-08T12:48:06.936Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-01-07T02:33:41.269Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-01-07T02:33:41.270Z] > authorizing via signed-in user (zakwanashfaq@gmail.com)
+[debug] [2023-01-08T12:48:07.009Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-08T12:48:07.010Z] > authorizing via signed-in user (zakwanashfaq@gmail.com)
 [info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
-[debug] [2023-01-07T02:33:41.287Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-01-07T02:33:41.287Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-01-07T02:33:41.288Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2023-01-07T02:33:41.292Z] [hub] writing locator at C:\Users\Zakwan\AppData\Local\Temp\hub-learnfirebase-f8c88.json
-[debug] [2023-01-07T02:33:41.325Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/learnfirebase-f8c88/sites 
-[debug] [2023-01-07T02:33:41.902Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/learnfirebase-f8c88/sites 200
-[debug] [2023-01-07T02:33:41.902Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/learnfirebase-f8c88/sites {"sites":[{"name":"projects/learnfirebase-f8c88/sites/learnfirebase-f8c88","defaultUrl":"https://learnfirebase-f8c88.web.app","appId":"1:57033989384:web:c2f91ca442d8d5b03320bd","type":"DEFAULT_SITE"},{"name":"projects/learnfirebase-f8c88/sites/zakwan","defaultUrl":"https://zakwan.web.app","appId":"1:57033989384:web:7ddf14bf9f5925403320bd","type":"USER_SITE"}]}
-[debug] [2023-01-07T02:33:41.902Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88/webApps/1:57033989384:web:c2f91ca442d8d5b03320bd/config [none]
-[debug] [2023-01-07T02:33:42.428Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88/webApps/1:57033989384:web:c2f91ca442d8d5b03320bd/config 200
-[debug] [2023-01-07T02:33:42.428Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88/webApps/1:57033989384:web:c2f91ca442d8d5b03320bd/config {"projectId":"learnfirebase-f8c88","appId":"1:57033989384:web:c2f91ca442d8d5b03320bd","storageBucket":"learnfirebase-f8c88.appspot.com","apiKey":"AIzaSyBolWNyeeaPxOOBxiL0j3-3uv16lRUNCM8","authDomain":"learnfirebase-f8c88.firebaseapp.com","messagingSenderId":"57033989384","measurementId":"G-FQZCCQRJEM"}
-[debug] [2023-01-07T02:33:42.432Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88 [none]
-[debug] [2023-01-07T02:33:42.888Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88 200
-[debug] [2023-01-07T02:33:42.889Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88 {"projectId":"learnfirebase-f8c88","projectNumber":"57033989384","displayName":"learnFirebase","name":"projects/learnfirebase-f8c88","resources":{"hostingSite":"learnfirebase-f8c88"},"state":"ACTIVE","etag":"1_aca315da-d5de-4e69-b12f-3af05a2d06a8"}
-[info] i  hosting[learnfirebase-f8c88]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
-[info] +  hosting[learnfirebase-f8c88]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[warn] !  emulators: The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project."}}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-└─────────────────────────────────────────────────────────────┘
-
-┌──────────┬────────────────┐
-│ Emulator │ Host:Port      │
-├──────────┼────────────────┤
-│ Hosting  │ 127.0.0.1:5000 │
-└──────────┴────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[info] i  hosting: 127.0.0.1 - - [07/Jan/2023:02:34:17 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jan/2023:02:34:17 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54\""}}
-[info] i  hosting: 127.0.0.1 - - [07/Jan/2023:02:34:19 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jan/2023:02:34:19 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54\""}}
-[debug] [2023-01-07T02:35:13.056Z] Received signal SIGHUP 1
+[debug] [2023-01-08T12:48:07.029Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-08T12:48:07.029Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-08T12:48:07.030Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-01-08T12:48:07.034Z] [hub] writing locator at C:\Users\Zakwan\AppData\Local\Temp\hub-learnfirebase-f8c88.json
+[debug] [2023-01-08T12:48:07.068Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88 [none]
+[debug] [2023-01-08T12:48:07.449Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88 200
+[debug] [2023-01-08T12:48:07.449Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/learnfirebase-f8c88 {"projectId":"learnfirebase-f8c88","projectNumber":"57033989384","displayName":"learnFirebase","name":"projects/learnfirebase-f8c88","resources":{"hostingSite":"learnfirebase-f8c88"},"state":"ACTIVE","etag":"1_aca315da-d5de-4e69-b12f-3af05a2d06a8"}
+[debug] [2023-01-08T12:48:13.429Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/learnfirebase-f8c88/sites pageToken=&pageSize=10
+[debug] [2023-01-08T12:48:13.982Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/learnfirebase-f8c88/sites 200
+[debug] [2023-01-08T12:48:13.982Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/learnfirebase-f8c88/sites {"sites":[{"name":"projects/learnfirebase-f8c88/sites/learnfirebase-f8c88","defaultUrl":"https://learnfirebase-f8c88.web.app","appId":"1:57033989384:web:c2f91ca442d8d5b03320bd","type":"DEFAULT_SITE"},{"name":"projects/learnfirebase-f8c88/sites/zakwan","defaultUrl":"https://zakwan.web.app","appId":"1:57033989384:web:7ddf14bf9f5925403320bd","type":"USER_SITE"}]}
+[debug] [2023-01-08T12:48:13.983Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:57033989384:web:c2f91ca442d8d5b03320bd/config [none]
+[debug] [2023-01-08T12:48:14.683Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:57033989384:web:c2f91ca442d8d5b03320bd/config 200
+[debug] [2023-01-08T12:48:14.683Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:57033989384:web:c2f91ca442d8d5b03320bd/config {"projectId":"learnfirebase-f8c88","appId":"1:57033989384:web:c2f91ca442d8d5b03320bd","storageBucket":"learnfirebase-f8c88.appspot.com","apiKey":"AIzaSyBolWNyeeaPxOOBxiL0j3-3uv16lRUNCM8","authDomain":"learnfirebase-f8c88.firebaseapp.com","messagingSenderId":"57033989384","measurementId":"G-FQZCCQRJEM"}

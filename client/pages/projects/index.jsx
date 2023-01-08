@@ -1,6 +1,6 @@
 import Folder from "./folder";
 import Item from "./item";
-import { PROJECTS_DATA } from "./projectData";
+import PROJECTS_DATA from "../../projectData.js";
 
 
 function ProjectPage(props) {
