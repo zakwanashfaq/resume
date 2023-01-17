@@ -18,10 +18,10 @@ function Item(props) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
         className: "item-container p-1 col-12 col-sm-6 col-lg-4 col-xl-3",
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-            class: "card",
+            class: "card p-0 " + props.bg,
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                    className: "p-2",
+                    className: "p-0 m-0 b-0",
                     src: props.image ? props.image : default_image,
                     alt: "Unavailable"
                 }),
@@ -47,7 +47,7 @@ function Item(props) {
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
                                 href: item.link,
                                 target: "_blank",
-                                class: "btn btn-primary m-1",
+                                class: "btn btn-outline-light m-1",
                                 children: item.name
                             });
                         })

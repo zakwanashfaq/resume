@@ -62,21 +62,41 @@
   font-weight: 500;
 }
 .project-page-conatiner {
-  background: #aeeee2;
-  background: linear-gradient(140deg, #aeeee2 0%, #dbd3b5 50%, #b2b2b2 100%);
   min-height: 100vh;
+  padding: 15px;
 }
 .project-page-conatiner h1 {
   color: #5c5c5c;
 }
 .project-page-conatiner .main-header {
-  padding: 30px 0 15px 0;
+  padding: 40px 0 40px 0;
 }
 .project-page-conatiner .item-container img {
-  border-radius: 15px;
+  border-radius: var(--bs-card-border-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   height: 200px;
-  width: auto;
   object-fit: cover;
+}
+.bg-purple {
+  background: linear-gradient(180deg, #1b6fe5 -10%, #80039c 80%);
+  color: #f8fcff;
+}
+.bg-blue {
+  background: linear-gradient(180deg, #64E9FF 0%, #103CE7 70%);
+  color: #f8fcff;
+}
+.bg-green {
+  background: linear-gradient(180deg, #0d9f67 0%, #02706b 100%);
+  color: #ffffff;
+}
+.bg-red {
+  background: linear-gradient(180deg, #dc03d8 -10%, #9c0303 70%, #73926c 100%);
+  color: #f8fcff;
+}
+.bg-yellow {
+  background: linear-gradient(180deg, #e67001 -10%, #0f016a 80%);
+  color: #e3e3e3;
 }
 body {
   margin: 0;

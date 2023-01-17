@@ -1,5 +1,6 @@
 function Folder(props) {
-    return <div className="folder-container row">
+    // data-masonry='{"percentPosition": true}'
+    return <div className="folder-container row" >
         {props.children}
     </div>
 }

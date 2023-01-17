@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "https://frozen-retreat-88120.herokuapp.com/",
   "dependencies": {
+    "@amplitude/node": "^1.10.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

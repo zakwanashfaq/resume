@@ -39,7 +39,7 @@ export const Jumbotron = (props) => {
                     <div className="row ">
                         <button type="button" class="btn btn-dark" onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
                     </div>
-                    <div className="row p-2">
+                    <div className="p-2">
                         <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenGithub}>Github</button>
                         <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenLinkedIn}>LinkedIn</button>
                     </div>
