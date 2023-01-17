@@ -1,24 +1,15 @@
 import Folder from "./folder";
 import Item from "./item";
 import PROJECTS_DATA from "../../projectData.js";
-import * as Amplitude from '@amplitude/node';
-
+import { init, track } from '@amplitude/analytics-node';
 
 
 function ProjectPage(props) {
-    const client = Amplitude.init('9245e556252008ae4890fecb25ad7e42');
-    client.logEvent({
-        event_type: 'Node.js Event',
-        user_id: 'datamonster@gmail.com',
-        location_lat: 37.77,
-        location_lng: -122.39,
-        ip: '127.0.0.1',
-        event_properties: {
-        keyString: 'valueString',
-        keyInt: 11,
-        keyBool: true
-        }
-    });
+    init('9245e556252008ae4890fecb25ad7e42');
+    track('Project Page loaded', undefined, {
+        event_type : "projects-page-opened",
+        user_id: "sdsfdghgjreywrtqer",
+      });
 
     let styleWheelCount=0;
     const bg_colors = [

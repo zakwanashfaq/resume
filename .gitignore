@@ -1,4 +1,6 @@
 server/node_modules
 client/node_modules
-client/.next
+client/.next/*
+client/.firebase/*
+client/build/*
 node_modules
