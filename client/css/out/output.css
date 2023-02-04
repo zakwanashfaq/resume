@@ -89,12 +89,17 @@
   font-weight: 500;
   font-size: 2rem;
 }
-.project-page-conatiner .project-page-nav-header {
+.project-page-conatiner .project-page-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+}
+.project-page-conatiner .project-page-nav .project-page-nav-header {
   background: #558f7d;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
-.project-page-conatiner .project-page-list-group-item {
+.project-page-conatiner .project-page-nav .project-page-list-group-item {
   color: #303030;
 }
 .project-page-conatiner .main-header {
