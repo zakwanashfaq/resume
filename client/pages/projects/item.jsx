@@ -8,7 +8,7 @@ function Item(props) {
                 <p class="card-text">{props.description}</p>
                 <p class="">Tech Stack: {props.tech_stack}</p>
                 {props.links?.map(item => {
-                    return <a href={item.link} target="_blank" class="btn btn-outline-light m-1">{item.name}</a>
+                    return <a href={item.link} target="_blank" class="btn btn-outline-dark m-1">{item.name}</a>
                 })}
             </div>
         </div>

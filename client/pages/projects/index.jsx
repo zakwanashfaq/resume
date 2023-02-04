@@ -13,11 +13,11 @@ function ProjectPage(props) {
 
     let styleWheelCount=0;
     const bg_colors = [
-        "bg-yellow",
-        "bg-blue",
-        "bg-purple",
-        "bg-red",
-        "bg-green",
+        // "bg-yellow",
+        // "bg-blue",
+        // "bg-purple",
+        // "bg-red",
+        // "bg-green",
     ];
     const getColor = () => {
         const index = styleWheelCount % (bg_colors.length);
@@ -26,11 +26,12 @@ function ProjectPage(props) {
     }
 
     return <div className="project-page-conatiner">
-        <div className="container-lg">
-            <div className="main-header">
+        <div className="main-header p-4 mb-5">
                 <h1>ALL PROJECTS</h1>
-                <span>Some projects have private github repo due to request from professors. Access can be provided to those on request.</span>
+                <span>Some projects have private repositories, as requested by professors. Access can be provided to those on request.</span>
             </div>
+        <div className="container-lg">
+            
             <Folder>
                 {PROJECTS_DATA.map(item => {
                     return <Item 
