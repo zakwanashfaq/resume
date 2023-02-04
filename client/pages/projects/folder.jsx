@@ -1,4 +1,5 @@
 function Folder(props) {
+    const BLOCK_FILTER = true;
     // data-masonry='{"percentPosition": true}'
     return <div className="folder-container row" >
         <div className="col-md-3">
@@ -10,7 +11,13 @@ function Folder(props) {
                         </span>
                     </div>
                     <div id="list-example" class="list-group rounded-0">
-                        <a class="project-page-list-group-item list-group-item list-group-item-action" href="#list-item-1">All</a>
+                        
+                        <a class="project-page-list-group-item list-group-item list-group-item-action" href="#list-item-1">
+                        {BLOCK_FILTER && <div className="blocking-overlay text-center">
+                                Filter under development
+                        </div>}
+                            All
+                        </a>
                         <a class="project-page-list-group-item list-group-item list-group-item-action" href="#list-item-2">Web Developemnt</a>
                         <a class="project-page-list-group-item list-group-item list-group-item-action" href="#list-item-3">Game Developemnt</a>
                         <a class="project-page-list-group-item list-group-item list-group-item-action" href="#list-item-4">A.I. Projects</a>
