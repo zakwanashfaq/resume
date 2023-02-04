@@ -1,3 +1,21 @@
+
+
+/**
+ * PROJECT_DATA schema
+ * {
+ *  name: string,
+ *  image: string,
+ *  description: string,
+ *  tech_stack: string,
+ *  links: [
+ *      {
+ *          name: string,
+ *          link: string
+ *      }
+ *  ]
+ * }
+ */
+
 export const PROJECTS_DATA = [
     {
         name: "Zelda Like Game with AI NPCs",

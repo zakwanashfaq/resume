@@ -65,9 +65,17 @@
   display: none;
 }
 .project-page-conatiner h1 {
-  color: #ffe2e2;
+  color: #ffffff;
   font-size: 5rem;
   font-weight: 900;
+}
+.project-page-conatiner .project-page-nav-header {
+  background: #558f7d;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+.project-page-conatiner .project-page-list-group-item {
+  color: #303030;
 }
 .project-page-conatiner .main-header {
   padding: 40px 0 40px 0;
