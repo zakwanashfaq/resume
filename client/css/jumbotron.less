@@ -3,8 +3,8 @@
 
     .customJumbotron-jumbotron {
         height: 100vh;
-        background: linear-gradient(170deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 60%);
         border-radius: 0;
+        z-index: 10;
 
         .customJumbotron-container {
             height: 100%;
@@ -14,10 +14,22 @@
             align-content: center;
             justify-content: center;
             align-items: center;
-
             .customJumbotron-name-highlight{
                 font-weight: 500;
             }
         }
     }
+}
+
+.star-canvas{    
+    //background: linear-gradient(170deg, rgb(138, 136, 137) 0%, rgba(148, 187, 233, 1) 60%);
+
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
