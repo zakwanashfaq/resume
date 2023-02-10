@@ -1,4 +1,4 @@
-// import "./css/out/jumbotron.css";
+import { init, track } from '@amplitude/analytics-node';
 import { useEffect } from "react";
 
 const onClickOpenGithub = (e) => {
@@ -75,6 +75,11 @@ const Stars = () => {
 export const Jumbotron = (props) => {
     // add back when contact page is ready
     // <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenContactsPage}>Contact Me</button>
+    init('9245e556252008ae4890fecb25ad7e42');
+    track('Homepage loaded', undefined, {
+        event_type : "home-page-opened",
+        user_id: "sdsfdghgjreywrtqer",
+    });
     
     // adding stars to the jumbotron on Component resize
     useEffect(() => {

@@ -3,4 +3,5 @@ client/node_modules
 client/.next/*
 client/.firebase/*
 client/build/*
+client/out/*
 node_modules
