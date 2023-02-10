@@ -1,0 +1,101 @@
+
+// hode scrollbar
+::-webkit-scrollbar {
+    display: none;
+}
+
+.project-page-conatiner{
+
+    h1{
+        color: rgb(255, 255, 255);
+        font-size: 5rem;
+        font-weight: 900;
+    }
+
+    .blocking-overlay{
+        background: #000000ab;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 510%;
+        z-index: 1;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .project-page-nav{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 30px;
+
+        .project-page-nav-header{
+            background: rgb(85, 143, 125);
+            color: rgb(255, 255, 255);
+            font-family: "Poppins", sans-serif;
+        }
+    
+        .project-page-list-group-item {
+            color: rgb(48, 48, 48);
+        }
+    }
+
+    .main-header{
+        padding: 40px 0 40px 0;
+        min-height: 43vh;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(180deg, rgb(23, 86, 95) 10%, rgb(0, 65, 44) 110%);
+        color: rgb(255, 255, 248);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-container{
+        img{
+            border-radius: var(--bs-card-border-radius);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}
+
+.bg-purple {
+    background: linear-gradient(180deg, rgb(27, 111, 229) -10%, rgb(128, 3, 156) 80%);
+    color: rgb(248, 252, 255);
+}
+
+.bg-blue {
+    background: linear-gradient(180deg, #64E9FF 0%, #103CE7 70%);
+    color: rgb(248, 252, 255);
+}
+
+.bg-green {
+    background: linear-gradient(180deg, #0d9f67 0%, #02706b 100%);
+    color: rgb(255, 255, 255);
+}
+
+
+.bg-red {
+    background: linear-gradient(180deg, rgb(220, 3, 216) -10%, rgb(156, 3, 3) 70%, rgb(115, 146, 108) 100%);
+    color: rgb(248, 252, 255);
+}
+
+.bg-yellow {
+    background: linear-gradient(180deg, rgb(230, 112, 1) -10%, rgb(15, 1, 106) 80%);
+    color: rgb(227, 227, 227);
+}

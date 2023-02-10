@@ -4,11 +4,14 @@
   "private": true,
   "proxy": "https://frozen-retreat-88120.herokuapp.com/",
   "dependencies": {
+    "@amplitude/analytics-node": "^1.0.2",
+    "@amplitude/node": "^1.10.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.14.0",
     "firebase-tools": "^11.16.1",
+    "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -16,11 +19,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"react-scripts start\"",
-    "build": "react-scripts build",
+    "start": "next start",
+    "build": "next build",
+    "dev": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"next dev\"",
+    "react-start": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"react-scripts start\"",
+    "react-build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "node_modules/.bin/firebase deploy"  
+    "deploy": "node_modules/.bin/firebase deploy"
   },
   "eslintConfig": {
     "extends": [
