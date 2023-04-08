@@ -39,6 +39,9 @@
   top: 15px;
   right: 20px;
 }
+.customJumbotron .dark-jumbotron {
+  color: azure;
+}
 .customJumbotron .customJumbotron-jumbotron {
   height: 100vh;
   border-radius: 0;
