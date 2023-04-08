@@ -80,15 +80,22 @@ export const Jumbotron = (props) => {
         event_type : "home-page-opened",
         user_id: "sdsfdghgjreywrtqer",
     });
-    
+    let darkMode = false;
     // adding stars to the jumbotron on Component resize
     useEffect(() => {
         Stars();
-        window.addEventListener('resize', Stars)
+        window.addEventListener('resize', Stars);
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     }, []);
 
     return (
         <div className="p-0 customJumbotron">
+            <div className='customJumbotron-darkmode-toggle'>
+                <button className={darkMode ? 'btn btn-dark' : 'btn btn-dark'}  data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title={darkMode ? "Toggle light-mode" : "Toggle dark-mode"}>
+                    {darkMode ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-sun"></i>}
+                </button>
+            </div>
             <canvas id="stars-canvas" className="star-canvas" />
             <div className="jumbotron mb-0 customJumbotron-jumbotron">
                 <div className="container customJumbotron-container">

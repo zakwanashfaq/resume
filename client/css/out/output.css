@@ -34,6 +34,11 @@
 .customJumbotron {
   color: #323232;
 }
+.customJumbotron .customJumbotron-darkmode-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+}
 .customJumbotron .customJumbotron-jumbotron {
   height: 100vh;
   border-radius: 0;
@@ -52,6 +57,7 @@
   font-weight: 500;
 }
 .star-canvas {
+  background: linear-gradient(170deg, #8a8889 0%, #94bbe9 60%);
   position: fixed;
   height: 100vh;
   width: 100vw;
