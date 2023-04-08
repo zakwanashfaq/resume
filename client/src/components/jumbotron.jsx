@@ -1,5 +1,5 @@
 import { init, track } from '@amplitude/analytics-node';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const onClickOpenGithub = (e) => {
     window.open(
@@ -80,7 +80,10 @@ export const Jumbotron = (props) => {
         event_type : "home-page-opened",
         user_id: "sdsfdghgjreywrtqer",
     });
-    let darkMode = false;
+    const [darkMode, setDarkMode] = useState(false);
+    const onDarkModeButtonClick = () => {
+        setDarkMode(!darkMode);
+    }
     // adding stars to the jumbotron on Component resize
     useEffect(() => {
         Stars();
@@ -92,11 +95,17 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
     return (
         <div className="p-0 customJumbotron">
             <div className='customJumbotron-darkmode-toggle'>
-                <button className={darkMode ? 'btn btn-dark' : 'btn btn-dark'}  data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title={darkMode ? "Toggle light-mode" : "Toggle dark-mode"}>
+                <button 
+                    className={darkMode ? 'btn btn-dark' : 'btn btn-dark'}  
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="left" 
+                    data-bs-title={darkMode ? "Toggle light-mode" : "Toggle dark-mode"}
+                    onClick={onDarkModeButtonClick}
+                >
                     {darkMode ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-sun"></i>}
                 </button>
             </div>
-            <canvas id="stars-canvas" className="star-canvas" />
+            <canvas id="stars-canvas" className={darkMode ? "star-canvas-dark" : "star-canvas"} />
             <div className="jumbotron mb-0 customJumbotron-jumbotron">
                 <div className="container customJumbotron-container">
                     <h1 className="display-4">Hello!</h1>

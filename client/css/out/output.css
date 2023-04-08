@@ -32,7 +32,7 @@
   }
 }
 .customJumbotron {
-  color: #323232;
+  color: #3f3f3f;
 }
 .customJumbotron .customJumbotron-darkmode-toggle {
   position: fixed;
@@ -57,7 +57,18 @@
   font-weight: 500;
 }
 .star-canvas {
-  background: linear-gradient(170deg, #8a8889 0%, #94bbe9 60%);
+  background: linear-gradient(170deg, rgba(160, 176, 245, 0.417) 0%, rgba(245, 246, 241, 0.358) 60%);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.star-canvas-dark {
+  background: linear-gradient(170deg, #161e40 0%, #6283a9 60%);
   position: fixed;
   height: 100vh;
   width: 100vw;
