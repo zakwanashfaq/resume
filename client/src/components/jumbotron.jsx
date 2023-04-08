@@ -84,16 +84,34 @@ export const Jumbotron = (props) => {
     const [darkMode, setDarkMode] = useState(false);
     const onDarkModeButtonClick = () => {
         setDarkMode(!darkMode);
+        localStorage.setItem("theme", !darkMode)
     }
     // adding stars to the jumbotron on Component resize
     useEffect(() => {
         Stars();
         window?.addEventListener('resize', Stars);
-        if (typeof window.matchMedia !== "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setDarkMode(true);
-        } else {
-            setDarkMode(false);
+        
+        if (localStorage.getItem("theme")) {
+            console.log(localStorage.getItem("theme"));
+            if (localStorage.getItem("theme") === 'false') {
+                console.log('true val');
+                setDarkMode(false);
+            }
+            else {
+                console.log('false val');
+                setDarkMode(true);
+            }
         }
+        else {
+            console.log('init val');
+
+            if (typeof window.matchMedia !== "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDarkMode(true);
+            } else {
+                setDarkMode(false);
+            }
+        }
+
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     }, []);
