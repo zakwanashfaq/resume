@@ -58,7 +58,7 @@ function ProjectPage(props) {
             <title>Projects</title>
         </Head>
         <div className={"project-page-conatiner " + (darkMode ? "project-page-conatiner-dark" : "")}>
-            <div className="main-header px-4 mb-5">
+            <div className={"main-header px-4 mb-5 " + (darkMode ? "main-header-dark" : "main-header-light")}>
                     <h1 className="pb-0 text-sm-center">ALL PROJECTS</h1>
                     <span className="px-md-5 text-sm-center">Some projects have private repositories, as requested by professors. Access can be provided to those on request.</span>
                 </div>
