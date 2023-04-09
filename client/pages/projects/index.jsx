@@ -3,6 +3,7 @@ import Item from "./item";
 import PROJECTS_DATA from "../../projectData.js";
 import { init, track } from '@amplitude/analytics-node';
 import Head from 'next/head'
+import { useEffect, useState } from "react";
 
 
 function ProjectPage(props) {
@@ -11,6 +12,8 @@ function ProjectPage(props) {
         event_type : "projects-page-opened",
         user_id: "sdsfdghgjreywrtqer",
     });
+
+    const [darkMode, setDarkMode] = useState(false);
 
     let styleWheelCount=0;
     const bg_colors = [
@@ -27,12 +30,35 @@ function ProjectPage(props) {
         return bg_colors[index];
     }
 
+    useEffect(() => {
+        if (localStorage.getItem("theme")) {
+            console.log(localStorage.getItem("theme"));
+            if (localStorage.getItem("theme") === 'false') {
+                console.log('true val');
+                setDarkMode(false);
+            }
+            else {
+                console.log('false val');
+                setDarkMode(true);
+            }
+        }
+        else {
+            console.log('init val');
+
+            if (typeof window.matchMedia !== "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDarkMode(true);
+            } else {
+                setDarkMode(false);
+            }
+        }
+    }, [])
+
     return <div>
         <Head>
             <title>Projects</title>
         </Head>
-        <div className="project-page-conatiner">
-            <div className="main-header p-4 mb-5">
+        <div className={"project-page-conatiner " + (darkMode ? "project-page-conatiner-dark" : "")}>
+            <div className={"main-header px-4 mb-5 " + (darkMode ? "main-header-dark" : "main-header-light")}>
                     <h1 className="pb-0 text-sm-center">ALL PROJECTS</h1>
                     <span className="px-md-5 text-sm-center">Some projects have private repositories, as requested by professors. Access can be provided to those on request.</span>
                 </div>
@@ -40,9 +66,10 @@ function ProjectPage(props) {
                 <Folder>
                     {PROJECTS_DATA.map(item => {
                         return <Item 
+                            key={item.name}
                             name={item.name}
                             image={item.image}
-                            bg={getColor()}
+                            bg={darkMode}
                             description={item.description}
                             tech_stack={item.tech_stack}
                             links={item.links}

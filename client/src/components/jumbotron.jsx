@@ -1,5 +1,5 @@
 import { init, track } from '@amplitude/analytics-node';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const onClickOpenGithub = (e) => {
     window.open(
@@ -80,17 +80,57 @@ export const Jumbotron = (props) => {
         event_type : "home-page-opened",
         user_id: "sdsfdghgjreywrtqer",
     });
-    
+      
+    const [darkMode, setDarkMode] = useState(false);
+    const onDarkModeButtonClick = () => {
+        setDarkMode(!darkMode);
+        localStorage.setItem("theme", !darkMode)
+    }
     // adding stars to the jumbotron on Component resize
     useEffect(() => {
         Stars();
-        window.addEventListener('resize', Stars)
+        window?.addEventListener('resize', Stars);
+        
+        if (localStorage.getItem("theme")) {
+            console.log(localStorage.getItem("theme"));
+            if (localStorage.getItem("theme") === 'false') {
+                console.log('true val');
+                setDarkMode(false);
+            }
+            else {
+                console.log('false val');
+                setDarkMode(true);
+            }
+        }
+        else {
+            console.log('init val');
+
+            if (typeof window.matchMedia !== "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDarkMode(true);
+            } else {
+                setDarkMode(false);
+            }
+        }
+
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     }, []);
 
     return (
         <div className="p-0 customJumbotron">
-            <canvas id="stars-canvas" className="star-canvas" />
-            <div className="jumbotron mb-0 customJumbotron-jumbotron">
+            <div className='customJumbotron-darkmode-toggle'>
+                <button 
+                    className={darkMode ? 'btn btn-light' : 'btn btn-dark'}  
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="left" 
+                    data-bs-title={darkMode ? "Toggle light-mode" : "Toggle dark-mode"}
+                    onClick={onDarkModeButtonClick}
+                >
+                    {darkMode ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-sun"></i>}
+                </button>
+            </div>
+            <canvas id="stars-canvas" className={darkMode ? "star-canvas-dark" : "star-canvas"} />
+            <div className={"jumbotron mb-0 customJumbotron-jumbotron" + (darkMode ? " dark-jumbotron" : "")}>
                 <div className="container customJumbotron-container">
                     <h1 className="display-4">Hello!</h1>
                     <p className="lead">I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq Zian</p>
@@ -99,11 +139,11 @@ export const Jumbotron = (props) => {
                     <div className="row">Web and Game Developer</div>
                     <br />
                     <div className="row ">
-                        <button type="button" class="btn btn-dark" onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
+                        <button type="button" class={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
                     </div>
                     <div className="p-2">
-                        <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenGithub}>Github</button>
-                        <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenLinkedIn}>LinkedIn</button>
+                        <button type="button" class={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
+                        <button type="button" class={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenLinkedIn}>LinkedIn</button>
                     </div>
                 </div>
             </div>
