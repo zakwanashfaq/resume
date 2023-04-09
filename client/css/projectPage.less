@@ -81,12 +81,20 @@
     }
 
     .item-container{
+        .card-body-custom{
+            height: 300px;
+            max-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         img{
             border-radius: var(--bs-card-border-radius);
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             max-height: 400px;
-            max-width: 400px;
+            max-width: 200px;
             object-fit: cover;
         }
     }
