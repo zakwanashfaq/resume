@@ -2,8 +2,7 @@ function Folder(props) {
     const BLOCK_FILTER = true;
     // data-masonry='{"percentPosition": true}'
     return <div className="folder-container row" >
-        <div className="col-md-3">
-            {/* <div className="row"> */}
+        {/* <div className="col-md-3">
                 <div className="project-page-nav pt-1">
                     <div className="project-page-nav-header py-3 px-2 text-center fw-bold rounded-top">
                         <span className="fs-4">
@@ -24,9 +23,8 @@ function Folder(props) {
                         <a class="project-page-list-group-item list-group-item list-group-item-action" href="#list-item-4">Others</a>
                     </div>
                 </div>
-            {/* </div> */}
-        </div>
-        <div className="col-md-9">
+        </div> */}
+        <div className="col-md-12">
             <div className="row">
                 {props.children}
             </div>

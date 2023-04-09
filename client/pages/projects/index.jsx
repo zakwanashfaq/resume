@@ -66,6 +66,7 @@ function ProjectPage(props) {
                 <Folder>
                     {PROJECTS_DATA.map(item => {
                         return <Item 
+                            key={item.name}
                             name={item.name}
                             image={item.image}
                             bg={darkMode}
