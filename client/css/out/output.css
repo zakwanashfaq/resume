@@ -102,6 +102,16 @@
   font-size: 5rem;
   font-weight: 900;
 }
+@media (max-width: 420px) {
+  .project-page-conatiner h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 370px) {
+  .project-page-conatiner h1 {
+    font-size: 3rem;
+  }
+}
 .project-page-conatiner .blocking-overlay {
   background: #000000ab;
   position: absolute;
@@ -140,7 +150,7 @@
   color: #fffff8;
 }
 .project-page-conatiner .main-header-light {
-  background: #bdbcbc 10%;
+  background: #f2f2f2 10%;
   color: #272727;
 }
 .project-page-conatiner .main-header-light h1 {

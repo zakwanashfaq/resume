@@ -74,7 +74,7 @@ const Stars = () => {
 
 export const Jumbotron = (props) => {
     // add back when contact page is ready
-    // <button type="button" class="btn btn-outline-dark m-1" onClick={onClickOpenContactsPage}>Contact Me</button>
+    // <button type="button" className="btn btn-outline-dark m-1" onClick={onClickOpenContactsPage}>Contact Me</button>
     init('9245e556252008ae4890fecb25ad7e42');
     track('Homepage loaded', undefined, {
         event_type : "home-page-opened",
@@ -139,11 +139,11 @@ export const Jumbotron = (props) => {
                     <div className="row">Web and Game Developer</div>
                     <br />
                     <div className="row ">
-                        <button type="button" class={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
+                        <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
                     </div>
                     <div className="p-2">
-                        <button type="button" class={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
-                        <button type="button" class={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenLinkedIn}>LinkedIn</button>
+                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
+                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenLinkedIn}>LinkedIn</button>
                     </div>
                 </div>
             </div>
