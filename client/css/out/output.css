@@ -33,6 +33,7 @@
 }
 .customJumbotron {
   color: #3f3f3f;
+  position: relative;
 }
 .customJumbotron .customJumbotron-darkmode-toggle {
   position: fixed;
@@ -43,12 +44,12 @@
   color: azure;
 }
 .customJumbotron .customJumbotron-jumbotron {
-  height: 100vh;
   border-radius: 0;
+  position: relative;
   z-index: 10;
+  top: -20vh;
 }
 .customJumbotron .customJumbotron-jumbotron .customJumbotron-container {
-  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -59,30 +60,30 @@
 .customJumbotron .customJumbotron-jumbotron .customJumbotron-container .customJumbotron-name-highlight {
   font-weight: 500;
 }
+.customJumbotron .customJumbotron-jumbotron .customJumbotron-container .my_photo {
+  height: 250px;
+  width: 250px;
+  z-index: 30000;
+}
 .dark-background {
   background-color: #3f3f3f;
+  z-index: -2;
 }
 .star-canvas {
   background: #efefef;
-  position: fixed;
   height: 43vh;
   width: 100vw;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   z-index: -1;
 }
 .star-canvas-dark {
   background: #212121;
-  position: fixed;
   height: 43vh;
   width: 100vw;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   z-index: -1;
+}
+#stars-canvas {
+  z-index: -1;
+  /* This will ensure the canvas appears above other content but below content with higher z-index values */
 }
 .navbar-custom {
   position: fixed;

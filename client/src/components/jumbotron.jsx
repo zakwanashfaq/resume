@@ -1,6 +1,5 @@
 import { init, track } from '@amplitude/analytics-node';
 import { useEffect, useState } from "react";
-import Image from 'next/image'
 
 
 const onClickOpenGithub = (e) => {
@@ -30,7 +29,7 @@ const Stars = () => {
     if(!canvas) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight * 0.43;
-    document.body.appendChild(canvas);
+    // document.getElementById("canvas-container") =(canvas);
     var ctx = canvas.getContext('2d');
     var stars = [];
     var numStars = canvas.width/7;
@@ -131,18 +130,20 @@ export const Jumbotron = (props) => {
                     {darkMode ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-sun"></i>}
                 </button>
             </div>
-            <canvas id="stars-canvas" className={(darkMode ? "star-canvas-dark" : "star-canvas")} />
-            <div className={"jumbotron mb-0 customJumbotron-jumbotron" + (darkMode ? " dark-jumbotron" : "")}>
+            <div id="canvas-container">
+                <canvas id="stars-canvas" className={(darkMode ? "star-canvas-dark" : "star-canvas")} />
+            </div>
+            <div className={"jumbotron customJumbotron-jumbotron" + (darkMode ? " dark-jumbotron" : "")}>
                 <div className="container customJumbotron-container">
-                    <Image className="rounded-circle" src="/my_photo.jpg" alt='my_photo' width={250} height={250} objectFit="cover"/>
+                    <img className="my_photo rounded-circle border border-secondary border-4" src="/my_photo.jpg" alt='my_photo'/>
                     {/* <h1 className="display-4">Hello!</h1> */}
-                    <p className="lead">I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq Zian</p>
-                    <div className="row">Honours in Computer Science</div>
+                    {/* <p className="lead">I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq Zian</p> */}
+                    <div className="row pt-4">Honours in Computer Science</div>
                     <div className="row">Memorial University of Newfoundland</div>
                     <div className="row">Web and Game Developer</div>
                     <br />
                     <div className="row ">
-                        <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
+                        <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-primary")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
                     </div>
                     <div className="p-2">
                         <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
