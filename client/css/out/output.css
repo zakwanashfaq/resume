@@ -59,10 +59,13 @@
 .customJumbotron .customJumbotron-jumbotron .customJumbotron-container .customJumbotron-name-highlight {
   font-weight: 500;
 }
+.dark-background {
+  background-color: #3f3f3f;
+}
 .star-canvas {
   background: #efefef;
   position: fixed;
-  height: 100vh;
+  height: 43vh;
   width: 100vw;
   top: 0;
   left: 0;
@@ -73,7 +76,7 @@
 .star-canvas-dark {
   background: #212121;
   position: fixed;
-  height: 100vh;
+  height: 43vh;
   width: 100vw;
   top: 0;
   left: 0;

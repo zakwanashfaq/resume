@@ -1,5 +1,7 @@
 import { init, track } from '@amplitude/analytics-node';
 import { useEffect, useState } from "react";
+import Image from 'next/image'
+
 
 const onClickOpenGithub = (e) => {
     window.open(
@@ -27,7 +29,7 @@ const Stars = () => {
     const canvas = document.getElementById('stars-canvas');
     if(!canvas) return;
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight * 0.43;
     document.body.appendChild(canvas);
     var ctx = canvas.getContext('2d');
     var stars = [];
@@ -117,7 +119,7 @@ export const Jumbotron = (props) => {
     }, []);
 
     return (
-        <div className="p-0 customJumbotron">
+        <div className={"p-0 customJumbotron " + (darkMode ? "dark-background" : "light-background")}>
             <div className='customJumbotron-darkmode-toggle'>
                 <button 
                     className={darkMode ? 'btn btn-light' : 'btn btn-dark'}  
@@ -129,10 +131,11 @@ export const Jumbotron = (props) => {
                     {darkMode ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-sun"></i>}
                 </button>
             </div>
-            <canvas id="stars-canvas" className={darkMode ? "star-canvas-dark" : "star-canvas"} />
+            <canvas id="stars-canvas" className={(darkMode ? "star-canvas-dark" : "star-canvas")} />
             <div className={"jumbotron mb-0 customJumbotron-jumbotron" + (darkMode ? " dark-jumbotron" : "")}>
                 <div className="container customJumbotron-container">
-                    <h1 className="display-4">Hello!</h1>
+                    <Image className="rounded-circle" src="/my_photo.jpg" alt='my_photo' width={250} height={250} objectFit="cover"/>
+                    {/* <h1 className="display-4">Hello!</h1> */}
                     <p className="lead">I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq Zian</p>
                     <div className="row">Honours in Computer Science</div>
                     <div className="row">Memorial University of Newfoundland</div>
