@@ -27,7 +27,7 @@ const Stars = () => {
     const canvas = document.getElementById('stars-canvas');
     if(!canvas) return;
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    //canvas.height = window.innerHeight;
     document.body.appendChild(canvas);
     var ctx = canvas.getContext('2d');
     var stars = [];

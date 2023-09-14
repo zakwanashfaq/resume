@@ -62,8 +62,8 @@
 .star-canvas {
   background: #efefef;
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 150px;
+  width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
@@ -73,8 +73,8 @@
 .star-canvas-dark {
   background: #212121;
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 150px;
+  width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
@@ -202,6 +202,9 @@
 .bg-yellow {
   background: linear-gradient(180deg, #e67001 -10%, #0f016a 80%);
   color: #e3e3e3;
+}
+.sidebar-container {
+  background-color: #f3f3f3;
 }
 body {
   margin: 0;
