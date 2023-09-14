@@ -11,12 +11,25 @@ function App() {
         <title>Zakwan Ashfaq | Portfolio</title>
       </Head>
       <div className='conatiner-fluid p-0 m-0'>
-        <div className='row p-0 m-0'>
-          <div className='col-12 col-md-4 col-lg-4 col-xl-3 p-0 m-0'>
+        <div className='flex-container p-0 m-0'>
+          <div className='sidebar p-0 m-0'>
             <Sidebar />
           </div>
-          <div className='col-12 col-md-8 col-lg-8 col-xl-9 p-0 m-0'>
-            <Jumbotron />
+          <div className='content p-0 m-0'>
+            <div className="overflow-scroll h-100">
+              <div className='bg-red py-5'>dc</div>
+              <div className='bg-blue py-5'>dc</div>
+              <div className='bg-green py-5'>dc</div>
+              <div className='bg-yellow py-5'>dc</div>
+              <div className='bg-red py-5'>dc</div>
+              <div className='bg-blue py-5'>dc</div>
+              <div className='bg-green py-5'>dc</div>
+              <div className='bg-yellow py-5'>dc</div>
+              <div className='bg-red py-5'>dc</div>
+              <div className='bg-blue py-5'>dc</div>
+              <div className='bg-green py-5'>dc</div>
+              <div className='bg-yellow py-5'>dc</div>
+            </div>
           </div>
         </div>
       </div>

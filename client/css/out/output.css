@@ -31,6 +31,39 @@
     transform: rotate(360deg);
   }
 }
+/* Default styles for smaller screens */
+.container {
+  width: 100%;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar {
+  width: 100%;
+}
+.content {
+  overflow-y: auto;
+}
+/* For large screens */
+@media (min-width: 1200px) {
+  .flex-container {
+    flex-direction: row;
+    height: 100vh;
+    /* Ensure the container takes up the full viewport height on large screens */
+  }
+  .sidebar {
+    width: 450px;
+    height: 100vh;
+    /* Full height of the viewport */
+    overflow-y: auto;
+  }
+  .content {
+    flex-grow: 1;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
 .customJumbotron {
   color: #3f3f3f;
 }
