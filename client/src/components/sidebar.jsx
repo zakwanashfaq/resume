@@ -3,7 +3,7 @@ import React from "react";
 export function Sidebar(props) {
     return (
         <>
-            <div className="d-flex flex-column p-4 m-0 vh-100 sidebar-container">
+            <div className="d-flex flex-column p-4 m-0 vh-lg-100 sidebar-container">
                 <h1 className="display-1">Hi!</h1>
                 <h3 className="ps-1">I am <strong>Zakwan</strong> Ashfaq</h3>
                 <hr />
@@ -51,7 +51,7 @@ export function Sidebar(props) {
                         </div>
                     </div>
                 </div>
-                <div style={{ flex: 1 }}>
+                <div className="d-none d-xl-block" style={{ flex: 1 }}>
                     {/* This will push the rest of the content down */}
                 </div>
                 <div className="row px-2 pb-0">
