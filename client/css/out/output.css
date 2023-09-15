@@ -94,24 +94,14 @@
 }
 .star-canvas {
   background: #efefef;
-  position: fixed;
-  height: 150px;
+  height: 25vh;
   width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   z-index: -1;
 }
 .star-canvas-dark {
   background: #212121;
-  position: fixed;
-  height: 150px;
+  height: 25vh;
   width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   z-index: -1;
 }
 .navbar-custom {
@@ -237,7 +227,7 @@
   color: #e3e3e3;
 }
 .sidebar-container {
-  background-color: #f3f3f3;
+  background-color: #fafafa;
 }
 @media (min-width: 1200px) {
   .sidebar-container {

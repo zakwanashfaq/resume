@@ -26,9 +26,9 @@ const onClickOpenProjectsPage = (e) => {
 const Stars = () => {
     const canvas = document.getElementById('stars-canvas');
     if(!canvas) return;
-    canvas.width = window.innerWidth;
+    canvas.width = window.innerWidth - 400;
     //canvas.height = window.innerHeight;
-    document.body.appendChild(canvas);
+    // document.body.appendChild(canvas);
     var ctx = canvas.getContext('2d');
     var stars = [];
     var numStars = canvas.width/7;
@@ -116,6 +116,22 @@ export const Jumbotron = (props) => {
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     }, []);
 
+    return (
+        <div className='p-0 customJumbotron'>
+            <div className='customJumbotron-darkmode-toggle'>
+                <button 
+                    className={darkMode ? 'btn btn-light' : 'btn btn-dark'}  
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="left" 
+                    data-bs-title={darkMode ? "Toggle light-mode" : "Toggle dark-mode"}
+                    onClick={onDarkModeButtonClick}
+                >
+                    {darkMode ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-sun"></i>}
+                </button>
+            </div>
+            <canvas id="stars-canvas" className={darkMode ? "star-canvas-dark" : "star-canvas"} />
+        </ div>
+    );
     return (
         <div className="p-0 customJumbotron">
             <div className='customJumbotron-darkmode-toggle'>

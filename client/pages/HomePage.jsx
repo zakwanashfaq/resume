@@ -3,6 +3,12 @@ import React from 'react';
 import { Jumbotron } from '../src/components/jumbotron';
 import Head from 'next/head'
 import Sidebar from '../src/components/sidebar';
+import { Skills } from '../src/components/skills';
+import { Experience } from '../src/components/experience';
+import { Education } from '../src/components/education';
+import { FeaturedProjects } from '../src/components/featuredProjects';
+import { Testemonials } from '../src/components/testemonials';
+import { ContactMe } from '../src/components/contactMe';
 
 function App() {
   return (
@@ -17,18 +23,15 @@ function App() {
           </div>
           <div className='content p-0 m-0'>
             <div className="overflow-scroll h-100">
-              <div className='bg-red py-5'>dc</div>
-              <div className='bg-blue py-5'>dc</div>
-              <div className='bg-green py-5'>dc</div>
-              <div className='bg-yellow py-5'>dc</div>
-              <div className='bg-red py-5'>dc</div>
-              <div className='bg-blue py-5'>dc</div>
-              <div className='bg-green py-5'>dc</div>
-              <div className='bg-yellow py-5'>dc</div>
-              <div className='bg-red py-5'>dc</div>
-              <div className='bg-blue py-5'>dc</div>
-              <div className='bg-green py-5'>dc</div>
-              <div className='bg-yellow py-5'>dc</div>
+              <div className='bg-secondary py-5'></div>
+              <div className="container-lg px-5">
+                <Skills />
+                <Experience />
+                <Education />
+                <FeaturedProjects />
+                <Testemonials />
+                <ContactMe />
+              </div>
             </div>
           </div>
         </div>
