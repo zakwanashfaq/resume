@@ -7,52 +7,37 @@ export function Skills(params) {
                 <h3 className="mb-4">
                     Skills
                 </h3>
-                <div className="d-flex mx-auto flex-column">
-                    <div className="d-flex align-items-center mb-3">
-                        <strong className="me-3">Languages</strong>
-                        <button disabled className="btn btn-success">Java</button>
-                        <button disabled className="btn btn-success ms-3">Javascript</button>
-                        <button disabled className="btn btn-success ms-3">Typescript</button>
-                        <button disabled className="btn btn-success ms-3">Python</button>
-                        <button disabled className="btn btn-success ms-3">C++</button>
-                        <button disabled className="btn btn-success ms-3">C#</button>
-                    </div>
-                    <div className="d-flex align-items-center mb-3">
-                        <strong className="me-3">Databases</strong>
-                        <button disabled className="btn btn-warning">MongoDB</button>
-                        <button disabled className="btn btn-warning ms-3">DynamoDB</button>
-                        <button disabled className="btn btn-warning ms-3">IndexedDB</button>
-                        <button disabled className="btn btn-warning ms-3">PostgreSQL</button>
-                    </div>
-                    <div className="d-flex align-items-center mb-3">
-                        <strong className="me-3">Frameworks</strong>
-                        <button disabled className="btn btn-danger">ReactJS</button>
-                        <button disabled className="btn btn-danger ms-3">Express</button>
-                        <button disabled className="btn btn-danger ms-3">NodeJS</button>
-                        <button disabled className="btn btn-danger ms-3">ThreeJS</button>
-                    </div>
-                    <div className="d-flex align-items-center mb-3">
-                        <strong className="me-3">Testing</strong>
-                        <button disabled className="btn btn-success">Java</button>
-                        <button disabled className="btn btn-success ms-3">Javascript</button>
-                        <button disabled className="btn btn-success ms-3">Typescript</button>
-                        <button disabled className="btn btn-success ms-3">Python</button>
-                        <button disabled className="btn btn-success ms-3">C++</button>
-                        <button disabled className="btn btn-success ms-3">C#</button>
-                    </div>
-                    <div className="d-flex align-items-center mb-3">
-                        <strong className="me-3">Cloud</strong>
-                        <button disabled className="btn btn-warning">MongoDB</button>
-                        <button disabled className="btn btn-warning ms-3">DynamoDB</button>
-                        <button disabled className="btn btn-warning ms-3">IndexedDB</button>
-                        <button disabled className="btn btn-warning ms-3">PostgreSQL</button>
-                    </div>
-                    <div className="d-flex align-items-center mb-3">
-                        <strong className="me-3">Others</strong>
-                        <button disabled className="btn btn-danger">ReactJS</button>
-                        <button disabled className="btn btn-danger ms-3">Express</button>
-                        <button disabled className="btn btn-danger ms-3">NodeJS</button>
-                        <button disabled className="btn btn-danger ms-3">ThreeJS</button>
+                <div className="">
+                    <div className="">
+                        <button disabled className="btn btn-success m-2">Java</button>
+                        <button disabled className="btn btn-success m-2">Javascript</button>
+                        <button disabled className="btn btn-success m-2">Typescript</button>
+                        <button disabled className="btn btn-success m-2">Python</button>
+                        <button disabled className="btn btn-success m-2">C++</button>
+                        <button disabled className="btn btn-success m-2">C#</button>
+                        <button disabled className="btn btn-warning m-2">MongoDB</button>
+                        <button disabled className="btn btn-warning m-2">DynamoDB</button>
+                        <button disabled className="btn btn-warning m-2">IndexedDB</button>
+                        <button disabled className="btn btn-warning m-2">PostgreSQL</button>
+                        <button disabled className="btn btn-danger m-2">ReactJS</button>
+                        <button disabled className="btn btn-danger m-2">Express</button>
+                        <button disabled className="btn btn-danger m-2">NodeJS</button>
+                        <button disabled className="btn btn-danger m-2">ThreeJS</button>
+                        <button disabled className="btn btn-success m-2">Java</button>
+                        <button disabled className="btn btn-success m-2">Javascript</button>
+                        <button disabled className="btn btn-success m-2">Python</button>
+                        <button disabled className="btn btn-success m-2">Typescript</button>
+                        <button disabled className="btn btn-success m-2">C++</button>
+                        <button disabled className="btn btn-success m-2">C#</button>
+                        <button disabled className="btn btn-warning m-2">MongoDB</button>
+                        <button disabled className="btn btn-warning m-2">DynamoDB</button>
+                        <button disabled className="btn btn-warning m-2">IndexedDB</button>
+                        <button disabled className="btn btn-warning m-2">PostgreSQL</button>
+                        <button disabled className="btn btn-danger m-2">ReactJS</button>
+                        <button disabled className="btn btn-danger m-2">Express</button>
+                        <button disabled className="btn btn-danger m-2">NodeJS</button>
+                        <button disabled className="btn btn-danger m-2">ThreeJS</button>
+
                     </div>
                 </div>
             </div>
