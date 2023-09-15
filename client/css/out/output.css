@@ -207,7 +207,7 @@
   object-fit: cover;
 }
 .bg-purple {
-  background: linear-gradient(180deg, #1b6fe5 -10%, #80039c 80%);
+  background: linear-gradient(180deg, rgba(27, 111, 229, 0.208) 10%, rgba(62, 0, 132, 0.375) 330%);
   color: #f8fcff;
 }
 .bg-blue {
@@ -227,11 +227,20 @@
   color: #e3e3e3;
 }
 .sidebar-container {
-  background-color: #fafafa;
+  background-color: #1e0015;
 }
 @media (min-width: 1200px) {
   .sidebar-container {
     height: 100vh;
+  }
+}
+.sidebar-container #profilePicture img {
+  height: 350px;
+  border-radius: 10px;
+}
+@media (max-height: 950px) or (max-width: 1200px) {
+  .sidebar-container #profilePicture {
+    display: none;
   }
 }
 body {

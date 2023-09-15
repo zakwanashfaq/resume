@@ -23,7 +23,7 @@ function App() {
           </div>
           <div className='content p-0 m-0'>
             <div className="overflow-scroll h-100">
-              <div className='bg-secondary py-5'></div>
+              <div className='bg-body-tertiary py-5'></div>
               <div className="container-lg px-5">
                 <Skills />
                 <Experience />

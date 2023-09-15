@@ -1,6 +1,6 @@
 import React from "react";
 
-function ExperienceItemHeader(props) {
+function ExperienceItem(props) {
     return (
         <>
             <div className="d-flex flex-row fs-5">
@@ -24,20 +24,13 @@ function ExperienceItemHeader(props) {
 }
 
 
-function ExperienceItem(props) {
-    return (
-        <>
-
-        </>
-    );
-}
 
 export function Experience(params) {
     return (
         <>
-            <div className="px-2 pb-5">
+            <div className="px-2 pb-5 mt-4">
                 <h3 className="mb-4">Experience</h3>
-                <ExperienceItemHeader
+                <ExperienceItem
                     companyName = "Rutter Inc."
                     position = "Development Project Lead"
                     duration = "4 months"
@@ -49,7 +42,7 @@ export function Experience(params) {
                         "Collaborated closely with Rutter Inc. developers and university peers to solve daily challenges."
                     ]}
                 />
-                <ExperienceItemHeader
+                <ExperienceItem
                     companyName = "Celtx"
                     position = "Development Project Lead"
                     duration = "4 months"
@@ -61,7 +54,7 @@ export function Experience(params) {
                         "Collaborated closely with Rutter Inc. developers and university peers to solve daily challenges."
                     ]}
                 />
-                <ExperienceItemHeader
+                <ExperienceItem
                     companyName = "Memorial University"
                     position = "Development Project Lead"
                     duration = "4 months"

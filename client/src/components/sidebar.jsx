@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { BUTTON_ENUMS } from "../enums";
 
 export function Sidebar(props) {
      // Default state based on window width, with a check for window's existence
@@ -29,9 +30,13 @@ export function Sidebar(props) {
     }, []); 
     return (
         <>
-            <div className="d-flex flex-column p-4 m-0 vh-lg-100 sidebar-container">
+            <div className="d-flex flex-column p-4 m-0 vh-lg-100 sidebar-container bg-body-secondary bg-gradient">
                 <h1 className="display-1">Hi!</h1>
                 <h3 className="ps-1">I am <strong>Zakwan</strong> Ashfaq</h3>
+                <div id="profilePicture">
+                    <hr />
+                    <img src="https://media.licdn.com/dms/image/C4D03AQHruOIcH9IFlQ/profile-displayphoto-shrink_800_800/0/1647905183875?e=2147483647&v=beta&t=dbcPKZKhAL3HPfs4NVX1K-JDjVDEdAQsH_ezLzUOius"/>
+                </div>
                 <hr />
                 <div className="ps-1 fs-5">Full Stack Software Developer</div>
                 <div className="ps-1">Honours in Computer Science</div>
@@ -56,7 +61,7 @@ export function Sidebar(props) {
                         <div class="col-12 col-md-6 col-lg-4 p-1">
                             <button className="btn btn-secondary w-100 h-100 d-flex flex-column align-items-center justify-content-center">
                                 <i class="bi bi-book-half d-block mb-1"></i>
-                                Education
+                                Academics
                             </button>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 p-1">
@@ -84,17 +89,17 @@ export function Sidebar(props) {
                     {/* This will push the rest of the content down */}
                 </div>
                 <div className="row px-2 pb-0">
-                    <div class="col-6 p-1">
+                    <div className="col-6 p-1">
                         <button className="btn btn-secondary w-100 h-100 d-flex flex-row align-items-center justify-content-center">
-                            <i class="bi bi-envelope-fill d-block pe-2"></i>
+                            <i className="bi bi-envelope-fill d-block pe-2"></i>
                             <span>
                                 Github
                             </span>
                         </button>
                     </div>
-                    <div class="col-6 p-1">
+                    <div className="col-6 p-1">
                         <button className="btn btn-secondary w-100 h-100 d-flex flex-row align-items-center justify-content-center">
-                            <i class="bi bi-envelope-fill d-block pe-2"></i>
+                            <i className="bi bi-envelope-fill d-block pe-2"></i>
                             <span>
                                 LinkedIn
                             </span>
