@@ -23,6 +23,10 @@ const onClickOpenProjectsPage = (e) => {
     window.open('/projects', "_self");
 }
 
+const onClickOpenResumePage = (e) => {
+    window.open('/resume', "_self");
+}
+
 const Stars = () => {
     const canvas = document.getElementById('stars-canvas');
     if(!canvas) return;
@@ -139,8 +143,9 @@ export const Jumbotron = (props) => {
                     <div className="row">Memorial University of Newfoundland</div>
                     <div className="row">Web and Game Developer</div>
                     <br />
-                    <div className="row ">
+                    <div className="row">
                         <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
+                        <button type="button" className={"mt-2 btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenResumePage}>Resume</button>
                     </div>
                     <div className="p-2">
                         <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
