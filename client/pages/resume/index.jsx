@@ -1,14 +1,13 @@
 //import './App.css';
 import React from 'react';
-import { Jumbotron } from '../src/components/jumbotron';
 import Head from 'next/head'
-import Sidebar from '../src/components/sidebar';
-import { Skills } from '../src/components/skills';
-import { Experience } from '../src/components/experience';
-import { Education } from '../src/components/education';
-import { FeaturedProjects } from '../src/components/featuredProjects';
-import { Testemonials } from '../src/components/testemonials';
-import { ContactMe } from '../src/components/contactMe';
+import Sidebar from '../../src/components/sidebar';
+import { Skills } from '../../src/components/skills';
+import { Experience } from '../../src/components/experience';
+import { Education } from '../../src/components/education';
+import { FeaturedProjects } from '../../src/components/featuredProjects';
+import { Testemonials } from '../../src/components/testemonials';
+import { ContactMe } from '../../src/components/contactMe';
 
 function App() {
   return (

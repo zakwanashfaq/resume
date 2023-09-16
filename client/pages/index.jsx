@@ -1,7 +1,6 @@
-import App from "./HomePage";
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { Jumbotron } from "../src/components/jumbotron";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,10 +18,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//getAnalytics(app);
+// Ensure analytics is initialized only on the client side
+if (typeof window !== "undefined") {
+  getAnalytics(app);
+}
 
 function HomePage() {
-    return <App />;
+    return <Jumbotron />;
 }
   
 export default HomePage
