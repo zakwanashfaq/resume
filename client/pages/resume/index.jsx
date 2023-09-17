@@ -8,6 +8,7 @@ import { Education } from '../../src/components/education';
 import { FeaturedProjects } from '../../src/components/featuredProjects';
 import { Testemonials } from '../../src/components/testemonials';
 import { ContactMe } from '../../src/components/contactMe';
+import { ResumeTopNavbar } from '../../src/components/resumeTopNav';
 
 function App() {
   return (
@@ -17,12 +18,12 @@ function App() {
       </Head>
       <div className='conatiner-fluid p-0 m-0'>
         <div className='flex-container p-0 m-0'>
-          <div className='sidebar p-0 m-0'>
+          {/* <div className='sidebar p-0 m-0'>
             <Sidebar />
-          </div>
+          </div> */}
           <div className='content p-0 m-0'>
             <div className="overflow-scroll h-100">
-              <div className='bg-body-tertiary py-5'></div>
+              <ResumeTopNavbar />
               <div className="container-lg px-5">
                 <Skills />
                 <Experience />

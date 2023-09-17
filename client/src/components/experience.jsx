@@ -14,7 +14,7 @@ function ExperienceItem(props) {
             <ul>
                 {
                     props.list?.map(item => {
-                        return <li className="my-4">{item}</li>
+                        return <li key={props.companyName} className="my-4">{item}</li>
                     })
                 }
             </ul>
