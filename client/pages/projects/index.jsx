@@ -1,6 +1,6 @@
 import Folder from "./folder";
 import Item from "./item";
-import PROJECTS_DATA from "../../projectData.js";
+import {PROJECTS_DATA} from "../../projectData.js";
 import { init, track } from '@amplitude/analytics-node';
 import Head from 'next/head'
 import { useEffect, useState } from "react";

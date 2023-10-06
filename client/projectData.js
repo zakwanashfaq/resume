@@ -104,4 +104,38 @@ export const PROJECTS_DATA = [
     }
 ]
 
-export default PROJECTS_DATA;
+export const EXPERIENCE_DATA = [
+    {
+        "position": "Software Developer",
+        "company": "Rutter Inc.",
+        "duration": "4 months",
+        "timespan": "May 2023 to Aug 2023",
+        "bulletPoints": [
+            "Lead the development of a multi-threaded, stress testing simulator and delivered the product on time",
+            "Identified 4 critical system limitations through scientific and repeatable tests, ensuring reliability of results"
+        ],
+        "techStack" : "Java, Python, C#, Pandas, GIT"
+    },
+    {
+        "position": "Software Developer",
+        "company": "Celtx",
+        "timespan": "May 2023 to Aug 2023",
+        "duration": "1 year 4 months",
+        "bulletPoints": [
+            "Lead the development of a multi-threaded, stress testing simulator and delivered the product on time",
+            "Identified 4 critical system limitations through scientific and repeatable tests, ensuring reliability of results"
+        ],
+        "techStack" : "Java, Python, C#, Pandas, GIT"
+    },
+    {
+        "position": "Webmaster",
+        "company": "Memorial University - MSA",
+        "timespan": "Jan 2020 to Dec 2020",
+        "duration": "1 year",
+        "bulletPoints": [
+            "Lead the development of a multi-threaded, stress testing simulator and delivered the product on time",
+            "Identified 4 critical system limitations through scientific and repeatable tests, ensuring reliability of results"
+        ],
+        "techStack" : "Java, Python, C#, Pandas, GIT"
+    }
+]

@@ -32,8 +32,8 @@ export function ResumeTopNavbar(params) {
                         <a className="mx-2 mb-3 btn btn-dark">Academics</a>
                         <a className="mx-2 mb-3 btn btn-dark">Featured Project</a>
                         <a className="mx-2 mb-3 btn btn-dark">All Project</a>
-                        <a className="mx-2 mb-3 btn btn-dark">Testimonials</a>
-                        <a className="mx-2 mb-3 btn btn-dark">Contacts</a>
+                        {/* <a className="mx-2 mb-3 btn btn-dark">Testimonials</a>
+                        <a className="mx-2 mb-3 btn btn-dark">Contacts</a> */}
                         <a className="mx-2 mb-3 btn btn-dark">Github</a>
                         <a className="mx-2 mb-3 btn btn-dark">LinkedIn</a>
                     </div>
