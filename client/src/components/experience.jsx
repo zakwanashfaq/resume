@@ -4,13 +4,16 @@ import { EXPERIENCE_DATA } from "../../projectData";
 function ExperienceItem(props) {
     return (
         <>
-            <div className="d-flex flex-row fs-5">
-                <strong>{props?.companyName}</strong>
-                <span className="mx-2">|</span>
-                <span>{props?.position}</span>
-                <span className="mx-2">|</span>
-                <span>{props?.duration}</span>
-                <span className="ms-auto">{props?.timespan}</span>
+            <div className="d-flex flex-column flex-md-row flex-wrap fs-5">
+                <div>
+                    <strong>{props?.companyName}</strong>
+                    <span className="mx-2">|</span>
+                    <span>{props?.position}</span>
+                </div>
+                <div className="ms-md-auto fs-6 d-flex flex-column">
+                    <span >{props?.timespan}</span>
+                    <span className="ms-md-auto">{props?.duration}</span>
+                </div>
             </div>
             <ul>
                 {

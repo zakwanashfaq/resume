@@ -3,19 +3,24 @@ import React from "react";
 function EducationItem(props) {
     return (
         <>
-            <div className="d-flex flex-row fs-5">
-                <strong>{props.institution}</strong>
-                <span className="mx-2">|</span>
-                <span>{props.program}</span>
-                <span className="ms-auto">{props.timespan}</span>
+            <div className="d-flex flex-column flex-lg-row flex-wrap fs-5">
+                <div>
+                    <strong>{props?.institution}</strong>
+                    <span className="mx-2">|</span>
+                    <span>{props?.program}</span>
+                </div>
+                <div className="ms-lg-auto fs-6 d-flex flex-column">
+                    <span >{props?.timespan}</span>
+                </div>
             </div>
             <ul>
                 {
-                    props.list?.map(item => {
-                        return <li className="my-4">{item}</li>
+                    props?.list?.map(item => {
+                        return <li key={props?.institution} className="my-4">{item}</li>
                     })
                 }
             </ul>
+            <hr className="my-5"/>
         </>
     );
 }
@@ -30,7 +35,7 @@ export function Education(params) {
                 <EducationItem
                     institution = "Memorial University of Newfoundland"
                     program = "Honours in Computer Science"
-                    timespan = "September 2019–August 2023"
+                    timespan = "Sept 2019 to Aug 2023"
                     list = {[
                         "Dean’s List 2021 award winner for excellent academic achievement.",
                         "All A’s in Computer Science courses with a CGPA of 3.75 and an average of 85.4%.",
