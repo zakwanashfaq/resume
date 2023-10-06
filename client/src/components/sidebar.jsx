@@ -7,7 +7,7 @@ export function Sidebar(props) {
     const isButtonsVisible= true;
     return (
         <>
-            <div className="d-flex flex-column p-4 m-0 vh-lg-100 sidebar-container bg-body-secondary bg-gradient">
+            <div className="d-flex flex-column p-4 m-0 vh-lg-100 sidebar-container bg-dark text-light bg-gradient">
                 <h1 className="display-1">Hi!</h1>
                 <h3 className="ps-1">I am <strong>Zakwan</strong> Ashfaq</h3>
                 <div id="profilePicture">
