@@ -1,9 +1,10 @@
 import React from "react";
+import { ID_ENUMS } from "../enums";
 
 export function Skills(params) {
     return (
         <>
-            <div className="px-2 py-5">
+            <div id={ID_ENUMS.SKILLS} className="px-2 py-5">
                 <h3 className="mb-4">
                     Skills
                 </h3>

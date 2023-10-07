@@ -1,5 +1,5 @@
 import React from "react";
-import { BUTTON_ENUMS } from "../enums";
+import { BUTTON_ENUMS, ID_ENUMS } from "../enums";
 
 function FeaturedItem(props) {
     return (
@@ -22,7 +22,7 @@ function FeaturedItem(props) {
 export function FeaturedProjects(params) {
     return (
         <>
-            <div id={BUTTON_ENUMS.FEATURED} className="px-2 py-5">
+            <div id={ID_ENUMS.FEATURED} className="px-2 py-5">
                 <div className="mb-4 d-flex">
                     <h3 >Featured Project</h3>
                     <div className="ms-auto d-flex justify-content-center">

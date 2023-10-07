@@ -1,4 +1,5 @@
 import React from "react";
+import { ID_ENUMS } from "../enums";
 
 function EducationItem(props) {
     return (
@@ -30,7 +31,7 @@ function EducationItem(props) {
 export function Education(params) {
     return (
         <>
-            <div className="px-2 pb-5">
+            <div id={ID_ENUMS.ACADEMICS} className="px-2 pb-5">
                 <h3 className="mb-4">Academics</h3>
                 <EducationItem
                     institution = "Memorial University of Newfoundland"

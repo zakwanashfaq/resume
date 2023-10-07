@@ -6,3 +6,12 @@ export const BUTTON_ENUMS = {
     TESTEMONIALS: "testemonials",
     CONATCT_ME: "contact_me"
 }
+
+export const ID_ENUMS = {
+    SKILLS : "skills_id",
+    WORK_EXPERIENCE: "work_experience_id",
+    ACADEMICS: "academics_id",
+    FEATURED: "featured_id",
+    TESTEMONIALS: "testemonials_id",
+    CONATCT_ME: "contact_me_id"
+}

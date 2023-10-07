@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Head>
-        <title>Zakwan Ashfaq | Portfolio</title>
+        <title>Full Resume</title>
       </Head>
       <div className='conatiner-fluid p-0 m-0'>
         <div className='flex-container p-0 m-0'>

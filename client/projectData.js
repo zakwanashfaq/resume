@@ -111,10 +111,12 @@ export const EXPERIENCE_DATA = [
         "duration": "4 months",
         "timespan": "May 2023 to Aug 2023",
         "bulletPoints": [
-            "Lead the development of a multi-threaded, stress testing simulator and delivered the product on time",
-            "Identified 4 critical system limitations through scientific and repeatable tests, ensuring reliability of results"
+            "Lead the development of a multi-threaded, stress testing application to evaluate and benchmark Rutter systems, networks and other infrastructure components.",
+            "Architected a cutting edge reporting system that analyzes the data from simulations and extracts meaningful results and insights from each run. The generated report is stored as a pdf for record.",
+            "Identified system limitations through scientific and repeatable tests, ensuring reliability of collected results.",
+            "Collaborated closely with Rutter Inc. developers and university peers to solve daily challenges."
         ],
-        "techStack" : "Java, Python, C#, Pandas, GIT"
+        "techStack" : "Java, Maven, C#, GRPC, Protobuffs, Python, Pandas, Numpy, Jupyter-Lab, GIT"
     },
     {
         "position": "Software Developer",
@@ -122,10 +124,12 @@ export const EXPERIENCE_DATA = [
         "timespan": "May 2023 to Aug 2023",
         "duration": "1 year 4 months",
         "bulletPoints": [
-            "Lead the development of a multi-threaded, stress testing simulator and delivered the product on time",
-            "Identified 4 critical system limitations through scientific and repeatable tests, ensuring reliability of results"
+            "Designed and developed a highly complex multi-tagging and custom assets system for a “AAA” client in record time, this helped to close a custom development contract.",
+            "Solved critical bugs in the system that was crashing the production environment in a timely manner to minimize system downtime, this helped maintain a good relation with clients.",
+            "Learned concepts fast, which helped boost my productivity and deliverables. This led me to be a part of Celtx Gem, which is the latest and most cutting-edge product in Celtx’s portfolio.",
+            "Explored new technologies - for example ThreeJS - that made our app more competitive and demoed it to the product owner for feedback and approval."
         ],
-        "techStack" : "Java, Python, C#, Pandas, GIT"
+        "techStack" : ": React, Javascript, Typescript, HTML, CSS, Jest, Selenium, Java, GIT, YJS, NodeJS, IndexedDB, DexieJS, Prosemirror, Perl, AWS"
     },
     {
         "position": "Webmaster",
@@ -133,9 +137,9 @@ export const EXPERIENCE_DATA = [
         "timespan": "Jan 2020 to Dec 2020",
         "duration": "1 year",
         "bulletPoints": [
-            "Lead the development of a multi-threaded, stress testing simulator and delivered the product on time",
-            "Identified 4 critical system limitations through scientific and repeatable tests, ensuring reliability of results"
+            "Built and Maintained a web-app used by thousands of students for daily community updates.",
+            "Collaborated with other team members to carry out time critical weekly events in a consistent manner."
         ],
-        "techStack" : "Java, Python, C#, Pandas, GIT"
+        "techStack" : "Python, React, HTML, CSS, Javascript, Django Rest Api, Bootstrap, SQL, SQLite, CPANEL"
     }
 ]

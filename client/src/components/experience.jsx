@@ -1,5 +1,6 @@
 import React from "react";
 import { EXPERIENCE_DATA } from "../../projectData";
+import { ID_ENUMS } from "../enums";
 
 function ExperienceItem(props) {
     return (
@@ -22,7 +23,9 @@ function ExperienceItem(props) {
                     })
                 }
             </ul>
-            <hr className="my-5"/>
+            <div className="pb-5">
+                <p>Tech-Stack: {props.techStack}</p>
+            </div>
         </>
     );
 }
@@ -32,7 +35,7 @@ function ExperienceItem(props) {
 export function Experience(params) {
     return (
         <>
-            <div className="px-2 pb-5 mt-4">
+            <div id={ID_ENUMS.WORK_EXPERIENCE} className="px-2 pb-5 mt-4">
                 <h3 className="mb-4">Experience</h3>
                 {
                     EXPERIENCE_DATA.map(expItem => {
@@ -42,6 +45,7 @@ export function Experience(params) {
                             duration = {expItem.duration}
                             timespan = {expItem.timespan}
                             list = {expItem.bulletPoints}
+                            techStack= {expItem.techStack}
                         />
                     })
                 }
