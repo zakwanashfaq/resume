@@ -253,6 +253,36 @@
     display: none;
   }
 }
+.skill-container .btn-cat-1 button {
+  background-color: #fb0069;
+  border: 0;
+  color: #ffffff;
+}
+.skill-container .btn-cat-2 button {
+  background-color: #c800ff;
+  border: 0;
+  color: #ffffff;
+}
+.skill-container .btn-cat-3 button {
+  background-color: #6a44a7;
+  border: 0;
+  color: #ffffff;
+}
+.skill-container .btn-cat-4 button {
+  background-color: #0015ff;
+  border: 0;
+  color: #ffffff;
+}
+.skill-container .btn-cat-5 button {
+  background-color: #008376;
+  border: 0;
+  color: #ffffff;
+}
+.skill-container .btn-cat-6 button {
+  background-color: #0c7b00;
+  border: 0;
+  color: #ffffff;
+}
 body {
   margin: 0;
 }
