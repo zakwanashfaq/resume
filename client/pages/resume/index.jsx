@@ -1,5 +1,5 @@
 //import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
 import Sidebar from '../../src/components/sidebar';
 import { Skills } from '../../src/components/skills';
@@ -11,6 +11,20 @@ import { ContactMe } from '../../src/components/contactMe';
 import { ResumeTopNavbar } from '../../src/components/resumeTopNav';
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem("theme")) {
+      console.log(localStorage.getItem("theme"));
+      if (localStorage.getItem("theme") === 'false') {
+          setDarkMode(false);
+      }
+      else {
+          setDarkMode(true);
+      }
+  }
+  }, [])
+
   return (
     <>
       <Head>
@@ -23,8 +37,8 @@ function App() {
           </div>
           <div className='content p-0 m-0'>
             <div className="overflow-scroll h-100">
-              <ResumeTopNavbar />
-              <div className="container-lg px-5">
+              <ResumeTopNavbar isDark={darkMode}/>
+              <div className={"container-lg px-5 " + (darkMode? "bg-dark text-light" : "")}>
                 <Skills />
                 <Experience />
                 <Education />

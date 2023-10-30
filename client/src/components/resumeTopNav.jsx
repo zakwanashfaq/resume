@@ -1,12 +1,22 @@
 
 
-export function ResumeTopNavbar(params) {
-    const bgStyle = {
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(/headerImg.jpg)`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center center'
-    };
+export function ResumeTopNavbar(props) {
+    let bgStyle = {};
+    if (props.isDark) {
+        bgStyle = {
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(/headerImg.jpg)`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center center'
+        };
+    } else {
+        bgStyle = {
+            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(/headerImg.jpg)`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center center'
+        };
+    }
 
 
 
@@ -28,7 +38,7 @@ export function ResumeTopNavbar(params) {
             </div>
             <div className="">
                 <div className="container-lg">
-                    <div className="d-flex justify-content-center my-auto text-white d-flex flex-wrap pt-3">
+                    <div className={"d-flex justify-content-center my-auto text-white d-flex flex-wrap pt-3" + props.isDark? "bg-dark" : ""}>
                         {/* <a className="mx-2 mb-3 btn btn-dark">Skills</a>
                         <a className="mx-2 mb-3 btn btn-dark">Experience</a>
                         <a className="mx-2 mb-3 btn btn-dark">Academics</a>
