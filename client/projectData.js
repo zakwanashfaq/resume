@@ -121,7 +121,7 @@ export const EXPERIENCE_DATA = [
     {
         "position": "Software Developer",
         "company": "Celtx",
-        "timespan": "May 2023 to Aug 2023",
+        "timespan": "Sept 2019 to Dec 2022",
         "duration": "1 year 4 months",
         "bulletPoints": [
             "Designed and developed a highly complex multi-tagging and custom assets system for a “AAA” client in record time, this helped to close a custom development contract.",

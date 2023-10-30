@@ -28,7 +28,7 @@ function App() {
                 <Skills />
                 <Experience />
                 <Education />
-                <FeaturedProjects />
+                {/* <FeaturedProjects /> */}
                 {/* <Testemonials /> */}
                 {/* <ContactMe /> */}
               </div>
