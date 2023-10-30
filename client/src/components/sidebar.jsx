@@ -39,9 +39,9 @@ export function Sidebar(props) {
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 p-1">
-                                <a className="btn btn-secondary w-100 h-100 d-flex flex-column align-items-center justify-content-center" href={'#' + ID_ENUMS.FEATURED}>
-                                    <i class="bi bi-star-fill d-block mb-1"></i>
-                                    Featured Projects
+                                <a className="btn btn-secondary w-100 h-100 d-flex flex-column align-items-center justify-content-center" href='/projects'>
+                                    <i class="bi bi-file-earmark-code-fill"></i>
+                                    All Projects
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 p-1">
