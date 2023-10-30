@@ -19,7 +19,19 @@ function FeaturedItem(props) {
     );
 }
 
-export function FeaturedProjects(params) {
+export function FeaturedProjects(props) {
+    return (
+        <>
+            <div id={ID_ENUMS.FEATURED} className="px-2 py-5">
+                <div className="d-flex justify-content-center">
+                    <a className={"p-3 btn btn-lg " + (props.darkMode ? "btn-light" : "btn-dark")} href="/projects">View all projects</a>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export function FeaturedProjects2(props) {
     return (
         <>
             <div id={ID_ENUMS.FEATURED} className="px-2 py-5">

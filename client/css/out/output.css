@@ -178,28 +178,6 @@
 .project-page-conatiner .project-page-nav .project-page-list-group-item {
   color: #303030;
 }
-.project-page-conatiner .main-header-dark {
-  background: #343434 10%;
-  color: #fffff8;
-}
-.project-page-conatiner .main-header-light {
-  background: #f2f2f2 10%;
-  color: #272727;
-}
-.project-page-conatiner .main-header-light h1 {
-  color: #434343;
-}
-.project-page-conatiner .main-header {
-  padding: 40px 0 40px 0;
-  min-height: 43vh;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
 .project-page-conatiner .item-container .card-body-custom {
   height: 300px;
   max-height: 300px;
@@ -235,6 +213,35 @@
 .bg-yellow {
   background: linear-gradient(180deg, #e67001 -10%, #0f016a 80%);
   color: #e3e3e3;
+}
+.main-header-dark {
+  background: #343434 10%;
+  color: #fffff8;
+}
+.main-header-dark h1 {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 900;
+}
+.main-header-light {
+  background: #f2f2f2 10%;
+  color: #272727;
+}
+.main-header-light h1 {
+  color: #434343;
+  font-size: 5rem;
+  font-weight: 900;
+}
+.main-header {
+  padding: 40px 0 40px 0;
+  min-height: 43vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 .sidebar-container {
   background-color: #1e0015;

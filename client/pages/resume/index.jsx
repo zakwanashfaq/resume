@@ -30,19 +30,23 @@ function App() {
       <Head>
         <title>Full Resume</title>
       </Head>
-      <div className='conatiner-fluid p-0 m-0'>
+      <div className={'conatiner-fluid p-0 m-0 '  + (darkMode? 'bg-dark text-light' : '')}>
         <div className='flex-container p-0 m-0'>
-          <div className='sidebar p-0 m-0'>
+          {/* <div className='sidebar p-0 m-0'>
             <Sidebar />
-          </div>
+          </div> */}
           <div className='content p-0 m-0'>
             <div className="overflow-scroll h-100">
-              <ResumeTopNavbar isDark={darkMode}/>
-              <div className={"container-lg px-5 " + (darkMode? "bg-dark text-light" : "")}>
+              {/* <ResumeTopNavbar isDark={darkMode}/> */}
+              <div className={"main-header px-4 mb-5 " + (darkMode ? "main-header-dark" : "main-header-light")}>
+                <h1 className="pb-0 text-sm-center">RESUME</h1>
+                <span className="px-md-5 text-sm-center">A more detailed version of my resume</span>
+              </div>
+              <div className="container-lg px-5 ">
                 <Skills />
                 <Experience />
                 <Education />
-                {/* <FeaturedProjects /> */}
+                <FeaturedProjects darkMode={darkMode}/>
                 {/* <Testemonials /> */}
                 {/* <ContactMe /> */}
               </div>
