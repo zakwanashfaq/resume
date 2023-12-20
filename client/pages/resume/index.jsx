@@ -9,6 +9,7 @@ import { FeaturedProjects } from '../../src/components/featuredProjects';
 import { Testemonials } from '../../src/components/testemonials';
 import { ContactMe } from '../../src/components/contactMe';
 import { ResumeTopNavbar } from '../../src/components/resumeTopNav';
+import { FloatingNavigation } from '../../src/components/floatingNavigation';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <title>Full Resume</title>
       </Head>
       <div className={'conatiner-fluid p-0 m-0 '  + (darkMode? 'bg-dark text-light' : '')}>
+        {/* <FloatingNavigation /> */}
         <div className='flex-container p-0 m-0'>
           {/* <div className='sidebar p-0 m-0'>
             <Sidebar />
@@ -39,7 +41,7 @@ function App() {
             <div className="overflow-scroll h-100">
               {/* <ResumeTopNavbar isDark={darkMode}/> */}
               <div className={"main-header px-4 mb-5 " + (darkMode ? "main-header-dark" : "main-header-light")}>
-                <h1 className="pb-0 text-sm-center">RESUME</h1>
+                <h1 className="pb-0 text-sm-center">About me</h1>
                 <span className="px-md-5 text-sm-center">A more detailed version of my resume</span>
               </div>
               <div className="container-lg px-5 ">

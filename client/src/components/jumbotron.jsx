@@ -1,5 +1,7 @@
 import { init, track } from '@amplitude/analytics-node';
 import { useEffect, useState } from "react";
+import { FloatingNavigation } from './floatingNavigation';
+import nameLogo from '../../public/nameText.png';
 
 const onClickOpenGithub = (e) => {
     window.open(
@@ -35,7 +37,7 @@ const Stars = () => {
     document.body.appendChild(canvas);
     var ctx = canvas.getContext('2d');
     var stars = [];
-    var numStars = canvas.width/7;
+    var numStars = canvas.width/30;
     for (var i = 0; i < numStars; i++) {
         stars.push({
             x: Math.random() * canvas.width,
@@ -123,31 +125,23 @@ export const Jumbotron = (props) => {
     
     return (
         <div className="p-0 customJumbotron">
-            <div className='customJumbotron-darkmode-toggle'>
-                <button 
-                    className={darkMode ? 'btn btn-light' : 'btn btn-dark'}  
-                    data-bs-toggle="tooltip" 
-                    data-bs-placement="left" 
-                    data-bs-title={darkMode ? "Toggle light-mode" : "Toggle dark-mode"}
-                    onClick={onDarkModeButtonClick}
-                >
-                    {darkMode ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-sun"></i>}
-                </button>
-            </div>
+            <FloatingNavigation />
             <canvas id="stars-canvas" className={darkMode ? "star-canvas-dark" : "star-canvas"} />
             <div className={"jumbotron mb-0 customJumbotron-jumbotron" + (darkMode ? " dark-jumbotron" : "")}>
                 <div className="container customJumbotron-container">
-                    <h1 className="display-4">Hello!</h1>
-                    <p className="lead">I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq Zian</p>
+                    <img className='pb-4 ms-md-5' src={"nameText.png"}/>
+                    <p className="lead">Hi! I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq</p>
                     <div className="row">Honours in Computer Science</div>
                     <div className="row">Memorial University of Newfoundland</div>
-                    <div className="row">Web and Game Developer</div>
+                    <div className="row">Game and Full-Stack Developer</div>
                     <br />
-                    <div className="row">
+                    {/* <div className="row">
                         <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenResumePage}>Resume</button>
                         <button type="button" className={"mt-2 btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
-                    </div>
+                    </div> */}
                     <div className="p-2">
+                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenProjectsPage}>Projects</button>
+                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenResumePage}>About Me</button>
                         <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
                         <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenLinkedIn}>LinkedIn</button>
                     </div>

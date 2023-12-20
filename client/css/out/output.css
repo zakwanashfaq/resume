@@ -67,13 +67,19 @@
 .customJumbotron {
   color: #3f3f3f;
 }
-.customJumbotron .customJumbotron-darkmode-toggle {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-}
 .customJumbotron .dark-jumbotron {
   color: azure;
+}
+.customJumbotron .dark-jumbotron img {
+  filter: invert(100%);
+}
+.customJumbotron img {
+  width: 50vw;
+}
+@media screen and (max-width: 768px) {
+  .customJumbotron img {
+    width: 90vw;
+  }
 }
 .customJumbotron .customJumbotron-jumbotron {
   height: 100vh;
@@ -91,6 +97,11 @@
 }
 .customJumbotron .customJumbotron-jumbotron .customJumbotron-container .customJumbotron-name-highlight {
   font-weight: 500;
+}
+.floating-navigation-container {
+  position: fixed;
+  top: 15px;
+  right: 20px;
 }
 .star-canvas {
   background: #efefef;
