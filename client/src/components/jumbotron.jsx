@@ -139,7 +139,8 @@ export const Jumbotron = (props) => {
                         <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenResumePage}>Resume</button>
                         <button type="button" className={"mt-2 btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
                     </div> */}
-                    <div className="p-2">
+                    
+                    <div className="p-2 d-flex ">
                         <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenProjectsPage}>Projects</button>
                         <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenResumePage}>About Me</button>
                         <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
