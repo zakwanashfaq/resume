@@ -29,7 +29,7 @@ const onClickOpenResumePage = (e) => {
     window.open('/resume', "_self");
 }
 
-const Stars = () => {
+const Stars = (isDarkMode = false) => {
     const canvas = document.getElementById('stars-canvas');
     if(!canvas) return;
     canvas.width = window.innerWidth;
@@ -37,7 +37,7 @@ const Stars = () => {
     document.body.appendChild(canvas);
     var ctx = canvas.getContext('2d');
     var stars = [];
-    var numStars = canvas.width/30;
+    var numStars = canvas.width/10;
     for (var i = 0; i < numStars; i++) {
         stars.push({
             x: Math.random() * canvas.width,
@@ -47,17 +47,18 @@ const Stars = () => {
             vy: Math.floor(Math.random() * 50) - 25
         });
     }
+
+    const StarColor = '#5b8f49';
     function drawStars() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.globalCompositeOperation = 'lighter';
         for (var i = 0, x = stars.length; i < x; i++) {
             var s = stars[i];
-            ctx.fillStyle = '#fff';
+            ctx.fillStyle = StarColor;
             ctx.beginPath();
             ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
             ctx.fill();
-            ctx.fillStyle = 'grey';
-            ctx.stroke();
+            //ctx.stroke();
         }
     }
     function animateStars() {
@@ -68,7 +69,7 @@ const Stars = () => {
     function updateStars() {
         for (var i = 0, x = stars.length; i < x; i++) {
             var s = stars[i];
-            s.x += s.vx / FPS;
+            //s.x += s.vx / FPS;
             s.y += s.vy / FPS;
             if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
             if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
@@ -94,7 +95,7 @@ export const Jumbotron = (props) => {
     }
     // adding stars to the jumbotron on Component resize
     useEffect(() => {
-        Stars();
+        Stars(darkMode);
         window?.addEventListener('resize', Stars);
         
         if (localStorage.getItem("theme")) {
@@ -129,22 +130,23 @@ export const Jumbotron = (props) => {
             <canvas id="stars-canvas" className={darkMode ? "star-canvas-dark" : "star-canvas"} />
             <div className={"jumbotron mb-0 customJumbotron-jumbotron" + (darkMode ? " dark-jumbotron" : "")}>
                 <div className="container customJumbotron-container">
-                    <img className='pb-4 ms-md-5' src={"nameText.png"}/>
-                    <p className="lead">Hi! I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq</p>
-                    <div className="row">Honours in Computer Science</div>
-                    <div className="row">Memorial University of Newfoundland</div>
-                    <div className="row">Game and Full-Stack Developer</div>
+                    {/* <img className='pb-4 ms-md-5' src={"nameText.png"}/> */}
+                    <p className="lead fs-1">Hi! I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq</p>
+                    <div className="row">Honours in Computer Science from Memorial University of Newfoundland</div>
+                    <div className="row"></div>
+                    <div className="row">Game and Full-Stack Web Developer</div>
+                    <div className="row">Certified AWS Solutions Architect Associate</div>
                     <br />
                     {/* <div className="row">
                         <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenResumePage}>Resume</button>
                         <button type="button" className={"mt-2 btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
                     </div> */}
                     
-                    <div className="p-2 d-flex ">
-                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenProjectsPage}>Projects</button>
-                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenResumePage}>About Me</button>
-                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
-                        <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenLinkedIn}>LinkedIn</button>
+                    <div className="p-2 btn-group btn-group-sm">
+                        <button type="button" className={"btn " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenProjectsPage}>Projects</button>
+                        {/* <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenResumePage}>About Me</button> */}
+                        <button type="button" className={"btn " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
+                        <button type="button" className={"btn " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenLinkedIn}>LinkedIn</button>
                     </div>
                 </div>
             </div>

@@ -113,6 +113,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+  --star-color: #f0f0f0;
 }
 .star-canvas-dark {
   background: #212121;
