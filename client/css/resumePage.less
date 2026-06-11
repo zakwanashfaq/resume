@@ -1,50 +1,199 @@
 
-.skill-container{
-    .btn-cat-1{
-        button{
-            background-color: rgb(251, 0, 105);
-            border: 0;
-            color: rgb(255, 255, 255);
+.resume-page {
+    font-family: var(--font-sans);
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+
+    &.bg-dark {
+        background-color: var(--paper-dark) !important;
+        color: var(--ink-dark);
+    }
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+
+    &::before {
+        content: "";
+        width: 5px;
+        height: 1.4rem;
+        border-radius: 3px;
+        background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+    }
+}
+
+.skill-container {
+    .skill-group-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-muted);
+    }
+
+    .skill-chip-row {
+        gap: 0.45rem;
+    }
+
+    .skill-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.4rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        background: var(--surface);
+        border: 1px solid rgba(26, 29, 33, 0.14);
+        color: var(--ink);
+        transition: border-color 0.18s ease, transform 0.18s ease;
+
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent-strong);
+        }
+
+        &:hover {
+            transform: translateY(-1px);
+            border-color: rgba(5, 150, 105, 0.45);
+        }
+    }
+}
+
+.resume-card {
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--line);
+
+    .resume-card-heading {
+        font-size: 1.1rem;
+
+        strong {
+            letter-spacing: -0.01em;
         }
     }
 
-    .btn-cat-2{
-        button{
-            background-color: rgb(200, 0, 255);
-            border: 0;
-            color: rgb(255, 255, 255);
+    .resume-card-divider {
+        opacity: 0.35;
+    }
+
+    .resume-card-role {
+        color: var(--ink-muted);
+    }
+
+    .resume-card-meta {
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+    }
+
+    .resume-card-list {
+        margin-top: 0.75rem;
+        padding-left: 1.25rem;
+        line-height: 1.65;
+
+        li::marker {
+            color: var(--accent-strong);
         }
     }
 
-    .btn-cat-3{
-        button{
-            background-color: rgb(106, 68, 167);
-            border: 0;
-            color: rgb(255, 255, 255);
+    .resume-card-tech {
+        font-size: 0.86rem;
+        color: var(--ink-muted);
+        border-top: 1px solid var(--line);
+        padding-top: 1rem;
+
+        &::before {
+            content: "Tech stack — ";
+            font-weight: 600;
+            color: var(--accent-strong);
+        }
+    }
+}
+
+.view-projects-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.9rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+    &:hover {
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(26, 29, 33, 0.22);
+    }
+}
+
+.view-projects-btn-dark {
+    color: #07120d;
+    background: var(--accent);
+    border-color: var(--accent);
+
+    &:hover {
+        color: #07120d;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    }
+}
+
+// dark mode overrides — the resume page toggles bootstrap's .bg-dark on its container
+.bg-dark {
+    .skill-container {
+        .skill-group-title {
+            color: var(--ink-dark-muted);
+        }
+
+        .skill-chip {
+            background: var(--surface-dark);
+            border-color: rgba(232, 234, 237, 0.16);
+            color: var(--ink-dark);
+
+            &::before {
+                background: var(--accent);
+            }
+
+            &:hover {
+                border-color: rgba(52, 211, 153, 0.45);
+            }
         }
     }
 
-    .btn-cat-4{
-        button{
-            background-color: rgb(0, 21, 255);
-            border: 0;
-            color: rgb(255, 255, 255);
-        }
-    }
+    .resume-card {
+        background: var(--surface-dark);
+        border-color: var(--line-dark);
 
-    .btn-cat-5{
-        button{
-            background-color: rgb(0, 131, 118);
-            border: 0;
-            color: rgb(255, 255, 255);
+        .resume-card-role,
+        .resume-card-meta,
+        .resume-card-tech {
+            color: var(--ink-dark-muted);
         }
-    }
 
-    .btn-cat-6{
-        button{
-            background-color: rgb(12, 123, 0);
-            border: 0;
-            color: rgb(255, 255, 255);
+        .resume-card-list li::marker {
+            color: var(--accent);
+        }
+
+        .resume-card-tech {
+            border-top-color: var(--line-dark);
+
+            &::before {
+                color: var(--accent);
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ export function FeaturedProjects(props) {
         <>
             <div id={ID_ENUMS.FEATURED} className="px-2 py-5">
                 <div className="d-flex justify-content-center">
-                    <a className={"p-3 btn btn-lg " + (props.darkMode ? "btn-light" : "btn-dark")} href="/projects">View all projects</a>
+                    <a className={"view-projects-btn" + (props.darkMode ? " view-projects-btn-dark" : "")} href="/projects">View all projects<i className="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </>
