@@ -3,26 +3,25 @@ import { ID_ENUMS } from "../enums";
 
 function EducationItem(props) {
     return (
-        <>
-            <div className="d-flex flex-column flex-lg-row flex-wrap fs-5">
-                <div>
+        <div className="resume-card mb-4">
+            <div className="d-flex flex-column flex-lg-row flex-wrap">
+                <div className="resume-card-heading">
                     <strong>{props?.institution}</strong>
-                    <span className="mx-2">|</span>
-                    <span>{props?.program}</span>
+                    <span className="resume-card-divider mx-2">|</span>
+                    <span className="resume-card-role">{props?.program}</span>
                 </div>
-                <div className="ms-lg-auto fs-6 d-flex flex-column">
-                    <span >{props?.timespan}</span>
+                <div className="ms-lg-auto d-flex flex-column resume-card-meta">
+                    <span>{props?.timespan}</span>
                 </div>
             </div>
-            <ul>
+            <ul className="resume-card-list mb-0">
                 {
                     props?.list?.map(item => {
-                        return <li key={props?.institution} className="my-4">{item}</li>
+                        return <li key={item} className="my-3">{item}</li>
                     })
                 }
             </ul>
-            <div className="my-5"/>
-        </>
+        </div>
     );
 }
 
@@ -32,7 +31,7 @@ export function Education(params) {
     return (
         <>
             <div id={ID_ENUMS.ACADEMICS} className="px-2 pb-4">
-                <h3 className="mb-4">Academics</h3>
+                <h3 className="mb-4 section-title">Academics</h3>
                 <EducationItem
                     institution = "Memorial University of Newfoundland"
                     program = "Honours in Computer Science"

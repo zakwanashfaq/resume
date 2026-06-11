@@ -48,8 +48,11 @@ const Stars = (isDarkMode = false) => {
         });
     }
 
-    const StarColor = '#5b8f49';
     function drawStars() {
+        // color resolved per frame so it follows the theme class on the canvas
+        const StarColor = canvas.classList.contains('star-canvas-dark')
+            ? 'rgba(52, 211, 153, 0.45)'
+            : 'rgba(5, 150, 105, 0.30)';
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.globalCompositeOperation = 'lighter';
         for (var i = 0, x = stars.length; i < x; i++) {
@@ -130,23 +133,17 @@ export const Jumbotron = (props) => {
             <canvas id="stars-canvas" className={darkMode ? "star-canvas-dark" : "star-canvas"} />
             <div className={"jumbotron mb-0 customJumbotron-jumbotron" + (darkMode ? " dark-jumbotron" : "")}>
                 <div className="container customJumbotron-container">
-                    {/* <img className='pb-4 ms-md-5' src={"nameText.png"}/> */}
-                    <p className="lead fs-1">Hi! I am <span className="customJumbotron-name-highlight">Zakwan</span> Ashfaq</p>
-                    <div className="row">Honours in Computer Science from Memorial University of Newfoundland</div>
-                    <div className="row"></div>
-                    <div className="row">Game and Full-Stack Web Developer</div>
-                    <div className="row">Certified AWS Solutions Architect Associate</div>
-                    <br />
-                    {/* <div className="row">
-                        <button type="button" className={"btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenResumePage}>Resume</button>
-                        <button type="button" className={"mt-2 btn " + (darkMode ? "btn-light" : "btn-dark")} onClick={onClickOpenProjectsPage}>Portfolio / Projects</button>
-                    </div> */}
-                    
-                    <div className="p-2 btn-group btn-group-sm">
-                        <button type="button" className={"btn " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenProjectsPage}>Projects</button>
-                        {/* <button type="button" className={"btn m-1 " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenResumePage}>About Me</button> */}
-                        <button type="button" className={"btn " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenGithub}>Github</button>
-                        <button type="button" className={"btn " + (darkMode ? "btn-outline-light" : "btn-outline-dark")} onClick={onClickOpenLinkedIn}>LinkedIn</button>
+                    <span className="hero-eyebrow">Software Developer</span>
+                    <h1 className="hero-title">Hi, I'm <span className="hero-name">Zakwan</span> Ashfaq</h1>
+                    <div className="hero-badges">
+                        <span className="hero-badge"><i className="bi bi-mortarboard-fill"></i>Honours in Computer Science, Memorial University</span>
+                        <span className="hero-badge"><i className="bi bi-controller"></i>Game &amp; Full-Stack Web Developer</span>
+                        <span className="hero-badge"><i className="bi bi-cloud-check-fill"></i>AWS Solutions Architect Associate</span>
+                    </div>
+                    <div className="hero-actions">
+                        <button type="button" className="hero-btn hero-btn-primary" onClick={onClickOpenProjectsPage}>Projects<i className="bi bi-arrow-right"></i></button>
+                        <button type="button" className="hero-btn" onClick={onClickOpenGithub}><i className="bi bi-github"></i>GitHub</button>
+                        <button type="button" className="hero-btn" onClick={onClickOpenLinkedIn}><i className="bi bi-linkedin"></i>LinkedIn</button>
                     </div>
                 </div>
             </div>

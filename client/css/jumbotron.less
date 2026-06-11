@@ -1,20 +1,7 @@
 .customJumbotron {
-    color: #3f3f3f;
+    color: var(--ink);
+    font-family: var(--font-sans);
 
-    .dark-jumbotron{
-        color: azure;
-
-        img {
-            filter: invert(100%);
-        }
-    }
-
-    img {
-        @media screen and (max-width: 768px) {
-            width: 90vw; 
-        }
-        width: 50vw;
-    }
     .customJumbotron-jumbotron {
         height: 100vh;
         border-radius: 0;
@@ -28,22 +15,206 @@
             align-content: center;
             justify-content: center;
             align-items: center;
-            .customJumbotron-name-highlight{
-                font-weight: 500;
+            text-align: center;
+        }
+    }
+
+    .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--accent-strong);
+        margin-bottom: 1.25rem;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 28px;
+            height: 2px;
+            border-radius: 2px;
+            background: currentColor;
+            opacity: 0.6;
+        }
+    }
+
+    .hero-title {
+        font-size: clamp(2.6rem, 6vw, 4.4rem);
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        line-height: 1.05;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-name {
+        background: linear-gradient(120deg, var(--accent-deep), var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-bottom: 2.25rem;
+        max-width: 720px;
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.95rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid var(--line);
+            backdrop-filter: blur(8px);
+            font-size: 0.86rem;
+            font-weight: 500;
+            color: var(--ink-muted);
+
+            i {
+                color: var(--accent-strong);
             }
+        }
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+    }
+
+    .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.7rem 1.5rem;
+        border-radius: 999px;
+        font-family: inherit;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(26, 29, 33, 0.16);
+        backdrop-filter: blur(8px);
+        cursor: pointer;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(26, 29, 33, 0.1);
+            border-color: rgba(26, 29, 33, 0.32);
+        }
+    }
+
+    .hero-btn-primary {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: #ffffff;
+
+        &:hover {
+            box-shadow: 0 12px 28px rgba(26, 29, 33, 0.22);
+            border-color: var(--ink);
+        }
+    }
+
+    .dark-jumbotron {
+        color: var(--ink-dark);
+
+        .hero-eyebrow {
+            color: var(--accent);
+        }
+
+        .hero-name {
+            background: linear-gradient(120deg, var(--accent), #6ee7b7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-badges .hero-badge {
+            background: rgba(23, 28, 34, 0.72);
+            border-color: var(--line-dark);
+            color: var(--ink-dark-muted);
+
+            i {
+                color: var(--accent);
+            }
+        }
+
+        .hero-btn {
+            background: rgba(23, 28, 34, 0.72);
+            border-color: rgba(232, 234, 237, 0.16);
+            color: var(--ink-dark);
+
+            &:hover {
+                box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+                border-color: rgba(232, 234, 237, 0.36);
+            }
+        }
+
+        .hero-btn-primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #07120d;
+
+            &:hover {
+                border-color: var(--accent);
+            }
+        }
+
+        img {
+            filter: invert(100%);
         }
     }
 }
 
-.floating-navigation-container{
+.floating-navigation-container {
     position: fixed;
-    top: 15px;
+    top: 18px;
     right: 20px;
+    z-index: 100;
 }
 
-.star-canvas{    
-    //background: linear-gradient(170deg, rgba(160, 176, 245, 0.417) 0%, rgba(245, 246, 241, 0.358) 60%);
-    background: #efefef;
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(26, 29, 33, 0.16);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(26, 29, 33, 0.12);
+    }
+}
+
+.theme-toggle-dark {
+    color: #fbd38d;
+    background: rgba(23, 28, 34, 0.72);
+    border-color: rgba(232, 234, 237, 0.16);
+
+    &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+    }
+}
+
+.star-canvas {
+    background: radial-gradient(ellipse 80% 60% at 50% 35%, #ffffff 0%, var(--paper) 70%, #eef0ef 100%);
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -52,12 +223,10 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    --star-color: #f0f0f0;
 }
 
-.star-canvas-dark{    
-    //background: linear-gradient(170deg, rgb(22, 30, 64) 0%, rgb(98, 131, 169) 60%);
-    background: #212121;
+.star-canvas-dark {
+    background: radial-gradient(ellipse 80% 60% at 50% 35%, #161c21 0%, var(--paper-dark) 70%, #0b0e12 100%);
     position: fixed;
     height: 100vh;
     width: 100vw;

@@ -31,7 +31,7 @@ function App() {
       <Head>
         <title>Full Resume</title>
       </Head>
-      <div className={'conatiner-fluid p-0 m-0 '  + (darkMode? 'bg-dark text-light' : '')}>
+      <div className={'conatiner-fluid p-0 m-0 resume-page '  + (darkMode? 'bg-dark text-light' : '')}>
         {/* <FloatingNavigation /> */}
         <div className='flex-container p-0 m-0'>
           {/* <div className='sidebar p-0 m-0'>
@@ -40,9 +40,10 @@ function App() {
           <div className='content p-0 m-0'>
             <div className="overflow-scroll h-100">
               {/* <ResumeTopNavbar isDark={darkMode}/> */}
-              <div className={"main-header px-4 mb-5 " + (darkMode ? "main-header-dark" : "main-header-light")}>
-                <h1 className="pb-0 text-sm-center">About me</h1>
-                <span className="px-md-5 text-sm-center">A more detailed version of my resume</span>
+              <div className={"main-header px-4 mb-4 " + (darkMode ? "main-header-dark" : "main-header-light")}>
+                <span className="main-header-eyebrow">Resume</span>
+                <h1 className="pb-0 text-sm-center">About Me</h1>
+                <span className="main-header-sub px-md-5 text-sm-center">A more detailed version of my resume</span>
               </div>
               <div className="container-lg px-5 ">
                 <Skills />
